@@ -1,6 +1,168 @@
-# Getting Started with Create React App
+# 📊 Bhart Chauhan - Data Analyst Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://bhartchauhan.me)
+[![React](https://img.shields.io/badge/React-18.x-blue)](https://reactjs.org/)
+[![Vercel](https://img.shields.io/badge/Deployed-Vercel-black)](https://vercel.com)
+
+> A modern, responsive portfolio website showcasing data analytics projects and skills.
+
+## 🌐 Live Website
+
+**Visit:** [bhartchauhan.me](https://bhartchauhan.me)
+
+## ✨ Features
+
+- 🎨 **Modern n8n-inspired design** with gradient backgrounds
+- 📱 **Fully responsive** - works on mobile, tablet, and desktop
+- 🚀 **Fast performance** - optimized React build
+- 📧 **Working contact form** with Formspree integration
+- 🎯 **Project filtering** by tech stack (Python, SQL, Power BI, Excel)
+- 🌙 **Smooth animations** and hover effects
+- ♿ **Accessible** design with proper ARIA labels
+
+## 🛠️ Tech Stack
+
+- **Frontend:** React 18.x
+- **Styling:** Custom CSS with modern gradients
+- **Icons:** Boxicons
+- **Form:** Formspree API
+- **Deployment:** Vercel
+- **Version Control:** Git & GitHub
+
+## 📂 Project Structure
+
+```
+my-portfolio/
+├── public/                 # Static files
+│   ├── index.html         # HTML template with SEO meta tags
+│   └── Bhart_Chauhan_Data_Analyst_Resume.pdf
+├── src/
+│   ├── assets/            # Images and media
+│   ├── components/        # Reusable React components
+│   │   ├── Header.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Footer.jsx
+│   │   ├── ProjectCard.jsx
+│   │   └── ThemeToggle.jsx
+│   ├── pages/             # Page components
+│   │   ├── Home.jsx
+│   │   ├── About.jsx
+│   │   ├── Skills.jsx
+│   │   ├── Projects.jsx
+│   │   └── Contact.jsx
+│   ├── data/              # JSON data
+│   │   └── projects.json
+│   ├── port.css           # Main styling
+│   ├── App.js             # Root component
+│   └── index.js           # Entry point
+└── package.json           # Dependencies
+```
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/BHARTCHAUHAN/-my-portfolio.git
+
+# Navigate to project directory
+cd my-portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm start
+```
+
+The app will open at [http://localhost:3000](http://localhost:3000)
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+Creates optimized production build in the `build` folder.
+
+## 🎨 Customization
+
+### Update Projects
+
+Edit `src/data/projects.json` to add/modify projects:
+
+```json
+{
+  "icon": "bx bxl-python",
+  "title": "Your Project",
+  "description": "Project description",
+  "tags": ["Python", "SQL"],
+  "githubLink": "https://github.com/username/repo",
+  "stack": ["Python", "SQL"]
+}
+```
+
+### Update Personal Info
+
+- **Hero Section:** `src/components/Hero.jsx`
+- **About Section:** `src/pages/About.jsx`
+- **Skills:** `src/pages/Skills.jsx`
+- **Contact Info:** `src/pages/Contact.jsx`
+
+## 📧 Contact Form Setup
+
+Contact form uses [Formspree](https://formspree.io). To use your own:
+
+1. Create account at formspree.io
+2. Get your form endpoint
+3. Update `src/pages/Contact.jsx`:
+```javascript
+const response = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+```
+
+## 🌐 Deployment
+
+### Vercel (Recommended)
+
+1. Push code to GitHub
+2. Import project in [Vercel](https://vercel.com)
+3. Connect custom domain in Vercel settings
+4. Update DNS records in domain provider
+
+### Other Platforms
+
+Works with any static hosting: Netlify, GitHub Pages, AWS S3, etc.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👤 Author
+
+**Bhart Chauhan**
+
+- Website: [bhartchauhan.me](https://bhartchauhan.me)
+- GitHub: [@BHARTCHAUHAN](https://github.com/BHARTCHAUHAN)
+- LinkedIn: [Bhart Chauhan](https://www.linkedin.com/in/bhart-chauhan-8a65bb277/)
+- Email: chauhanbhart2792@gmail.com
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## ⭐ Show your support
+
+Give a ⭐️ if you like this project!
+
+---
+
+**Built with ❤️ using React**
 
 ## Available Scripts
 
