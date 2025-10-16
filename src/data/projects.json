@@ -1,0 +1,18 @@
+[
+  {
+    "icon": "bx bxl-python",
+    "title": "Sales Data Analysis",
+    "description": "Analyzed sales data using Python and Power BI to uncover trends and insights.",
+    "tags": ["Python", "Power BI", "Data Analysis"],
+    "githubLink": "https://github.com/BHARTCHAUHAN/sales-data-analysis",
+    "stack": ["Python", "Power BI"]
+  },
+  {
+    "icon": "bx bxl-sql-server",
+    "title": "SQL Reporting Automation",
+    "description": "Automated SQL reports for business intelligence dashboards.",
+    "tags": ["SQL", "Automation", "BI"],
+    "githubLink": "https://github.com/BHARTCHAUHAN/sql-reporting-automation",
+    "stack": ["SQL"]
+  }
+]
