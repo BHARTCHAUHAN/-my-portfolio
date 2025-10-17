@@ -35,15 +35,15 @@ function Skills() {
   return (
     <section className="skills-n8n">
       <div className="skills-n8n-content">
-        <h2 className="skills-n8n-title gradient-text">My Skills</h2>
+        <h2 className="skills-n8n-title gradient-text" data-aos="fade-up">My Skills</h2>
         <div className="skills-n8n-columns">
-          <div className="skills-n8n-col">
+          <div className="skills-n8n-col" data-aos="fade-right" data-aos-delay="100">
             <h3 className="skills-n8n-subtitle">Technical Skills</h3>
-            {technical.map(s => <SkillBar key={s.label} {...s} />)}
+            {technical.map((s, index) => <SkillBar key={s.label} {...s} data-aos="fade-up" data-aos-delay={200 + index * 50} />)}
           </div>
-          <div className="skills-n8n-col">
+          <div className="skills-n8n-col" data-aos="fade-left" data-aos-delay="100">
             <h3 className="skills-n8n-subtitle">Professional Skills</h3>
-            {professional.map(s => <SkillBar key={s.label} {...s} />)}
+            {professional.map((s, index) => <SkillBar key={s.label} {...s} data-aos="fade-up" data-aos-delay={200 + index * 50} />)}
           </div>
         </div>
       </div>

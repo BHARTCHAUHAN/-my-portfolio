@@ -15,8 +15,8 @@ export default function Projects() {
   return (
     <section className="projects-n8n">
       <div className="projects-n8n-content">
-        <h2 className="projects-n8n-title gradient-text">My Projects</h2>
-        <div className="projects-n8n-filters">
+        <h2 className="projects-n8n-title gradient-text" data-aos="fade-up">My Projects</h2>
+        <div className="projects-n8n-filters" data-aos="fade-up" data-aos-delay="100">
           {FILTERS.map(f=>(
             <button
               key={f}
@@ -29,7 +29,7 @@ export default function Projects() {
           ))}
         </div>
         <div className="projects-n8n-grid">
-          {list.map(p => <ProjectCard key={p.title} {...p} />)}
+          {list.map((p, index) => <ProjectCard key={p.title} {...p} data-aos="zoom-in" data-aos-delay={index * 50} />)}
         </div>
       </div>
     </section>

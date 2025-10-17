@@ -1692,3 +1692,174 @@ body {
 .section-title, .hero-title, h3 {
     font-family: 'Poppins', sans-serif;
 }
+
+/* ================================
+   SMOOTH ANIMATIONS & TRANSITIONS
+   ================================ */
+
+/* Smooth button animations */
+.n8n-btn, .projects-n8n-filter {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.n8n-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.n8n-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Smooth card hover animations */
+.project-card-n8n {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card-n8n:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.project-card-n8n:hover .project-card-n8n-icon {
+  transform: rotate(360deg) scale(1.1);
+  transition: transform 0.6s ease;
+}
+
+/* Skill bar animation */
+.n8n-skillbar-bar {
+  transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Social icons pulse animation */
+.hero-n8n-social a {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.hero-n8n-social a:nth-child(1) { animation-delay: 0s; }
+.hero-n8n-social a:nth-child(2) { animation-delay: 0.2s; }
+.hero-n8n-social a:nth-child(3) { animation-delay: 0.4s; }
+.hero-n8n-social a:nth-child(4) { animation-delay: 0.6s; }
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* Gradient text shimmer effect */
+.gradient-text {
+  background-size: 200% auto;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading animation for images */
+img {
+  transition: opacity 0.5s ease-in-out;
+}
+
+img:not([src]) {
+  opacity: 0;
+}
+
+/* Form input focus animation */
+.contact-n8n-form input,
+.contact-n8n-form textarea {
+  transition: all 0.3s ease;
+}
+
+.contact-n8n-form input:focus,
+.contact-n8n-form textarea:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.1);
+}
+
+/* Button ripple effect on click */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Floating animation for profile image */
+.hero-n8n-image img,
+.about-n8n-image img {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Filter buttons active animation */
+.projects-n8n-filter.active {
+  animation: filterPulse 0.3s ease;
+}
+
+@keyframes filterPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Smooth opacity transitions */
+* {
+  transition: opacity 0.3s ease;
+}
+
+/* Page load fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* AOS custom animations */
+[data-aos] {
+  pointer-events: auto;
+}
+
+/* Mobile optimization */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

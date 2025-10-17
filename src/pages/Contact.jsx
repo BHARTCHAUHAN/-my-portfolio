@@ -51,9 +51,9 @@ const Contact = () => {
   return (
     <section className="contact-n8n" id="contact">
       <div className="contact-n8n-content">
-        <h2 className="contact-n8n-title gradient-text">Get in Touch</h2>
+        <h2 className="contact-n8n-title gradient-text" data-aos="fade-up">Get in Touch</h2>
         <div className="contact-n8n-main">
-          <div className="contact-n8n-info">
+          <div className="contact-n8n-info" data-aos="fade-right" data-aos-delay="100">
             <h3 className="contact-n8n-subtitle">Connect with Me</h3>
             <p className="contact-n8n-desc">I enjoy data-driven problems. Discuss projects or exchange ideas.</p>
             <div className="contact-n8n-details">
@@ -71,7 +71,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <form className="contact-n8n-form" onSubmit={handleSubmit}>
+          <form className="contact-n8n-form" onSubmit={handleSubmit} data-aos="fade-left" data-aos-delay="100">
             <div className="form-group-n8n">
               <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} className={errors.name ? 'error' : ''} />
               {errors.name && <span className="error-msg">{errors.name}</span>}
