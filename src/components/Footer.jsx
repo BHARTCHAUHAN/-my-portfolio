@@ -19,105 +19,65 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="modern-footer" data-aos="fade-up">
-      <div className="container">
-        <div className="row g-4">
-          {/* Brand Column */}
-          <div className="col-lg-4 col-md-6">
-            <div className="footer-brand">
-              <div className="footer-logo">
-                <i className="bx bxs-data"></i>
-              </div>
-              <h3 className="footer-title">Bhart Chauhan</h3>
-              <p className="footer-tagline">Data Analyst • BI Specialist</p>
-              <p className="footer-description">
-                Transforming data into actionable insights using Python, SQL, and Power BI to drive data-driven decisions.
-              </p>
-            </div>
+    <footer className="footer-n8n" data-aos="fade-up">
+      <div className="footer-n8n-content">
+        {/* Footer Main */}
+        <div className="footer-n8n-main">
+          {/* Brand Section */}
+          <div className="footer-n8n-brand">
+            <h3 className="footer-n8n-title">Bhart Chauhan</h3>
+            <p className="footer-n8n-role">Data Analyst & BI Specialist</p>
+            <p className="footer-n8n-description">
+              Transforming data into actionable insights using Python, SQL, and Power BI.
+            </p>
           </div>
 
-          {/* Quick Links Column */}
-          <div className="col-lg-2 col-md-6">
-            <div className="footer-section">
-              <h4 className="footer-heading">Quick Links</h4>
-              <ul className="footer-links">
-                {quickLinks.map((link) => (
-                  <li key={link.href}>
-                    <a href={link.href}>
-                      <i className="bx bx-chevron-right"></i>
-                      {link.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+          {/* Quick Links */}
+          <nav className="footer-n8n-nav">
+            <h4 className="footer-section-title">Navigation</h4>
+            {quickLinks.map((link) => (
+              <a key={link.href} href={link.href}>
+                {link.label}
+              </a>
+            ))}
+          </nav>
 
-          {/* Skills Column */}
-          <div className="col-lg-3 col-md-6">
-            <div className="footer-section">
-              <h4 className="footer-heading">Core Skills</h4>
-              <ul className="footer-skills">
-                <li><i className="bx bxl-python"></i> Python</li>
-                <li><i className="bx bx-data"></i> SQL</li>
-                <li><i className="bx bxs-bar-chart-alt-2"></i> Power BI</li>
-                <li><i className="bx bx-spreadsheet"></i> Excel</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Contact Column */}
-          <div className="col-lg-3 col-md-6">
-            <div className="footer-section">
-              <h4 className="footer-heading">Get in Touch</h4>
-              <ul className="footer-contact">
-                <li>
-                  <i className="bx bx-envelope"></i>
-                  <a href="mailto:chauhanbhart2792@gmail.com">chauhanbhart2792@gmail.com</a>
-                </li>
-                <li>
-                  <i className="bx bx-phone"></i>
-                  <a href="tel:+918189091763">+91 81890 91763</a>
-                </li>
-                <li>
-                  <i className="bx bx-map"></i>
-                  <span>New Delhi, India</span>
-                </li>
-              </ul>
-              
-              {/* Social Links */}
-              <div className="footer-social">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={social.label}
-                    className="social-icon"
-                  >
-                    <i className={`bx ${social.icon}`}></i>
-                  </a>
-                ))}
-              </div>
-            </div>
+          {/* Contact Info */}
+          <div className="footer-n8n-contact">
+            <h4 className="footer-section-title">Contact</h4>
+            <a href="mailto:chauhanbhart2792@gmail.com">chauhanbhart2792@gmail.com</a>
+            <a href="tel:+918189091763">+91 81890 91763</a>
+            <span>New Delhi, India</span>
           </div>
         </div>
 
+        {/* Social Links */}
+        <div className="footer-n8n-social">
+          {socialLinks.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={social.label}
+              title={social.label}
+            >
+              <i className={`bx ${social.icon}`} aria-hidden="true" />
+            </a>
+          ))}
+        </div>
+
+        {/* Divider */}
+        <div className="footer-n8n-divider" />
+
         {/* Footer Bottom */}
-        <div className="footer-bottom">
-          <div className="row align-items-center">
-            <div className="col-md-6">
-              <p className="footer-copyright">
-                © {year} <span className="gradient-text">Bhart Chauhan</span>. All rights reserved.
-              </p>
-            </div>
-            <div className="col-md-6">
-              <p className="footer-credits">
-                Built with <i className="bx bxs-heart"></i> using React & Bootstrap
-              </p>
-            </div>
-          </div>
+        <div className="footer-n8n-bottom">
+          <p className="footer-n8n-copyright">
+            © {year} <span className="gradient-text">Bhart Chauhan</span> • All rights reserved
+          </p>
+          <p className="footer-n8n-credits">
+            Built with <i className="bx bxs-heart" style={{ color: '#ffb86c' }} /> using React, Bootstrap & n8n design
+          </p>
         </div>
       </div>
     </footer>
