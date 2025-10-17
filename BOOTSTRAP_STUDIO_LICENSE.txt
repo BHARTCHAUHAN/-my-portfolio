@@ -1,0 +1,28 @@
+# Bootstrap Studio License Key
+
+License Key: ec7bf445fd428b8bd26ea155062aa152c06dffcd
+
+IMPORTANT: Keep this key safe and secure!
+This license allows you to use Bootstrap Studio for professional web design.
+
+## How to Use:
+
+1. Download Bootstrap Studio from: https://bootstrapstudio.io/
+2. Install and launch Bootstrap Studio
+3. Go to Help > Enter License Key
+4. Enter the key above
+5. Enjoy unlimited access to Bootstrap Studio features!
+
+## Bootstrap Studio Features:
+- Drag & drop interface builder
+- Pre-built Bootstrap 5 components
+- Live preview
+- Export clean HTML/CSS/JS
+- Responsive design tools
+- Custom code editor
+
+## Integration with React Portfolio:
+You can design components in Bootstrap Studio and export them,
+then integrate the code into this React portfolio.
+
+Generated: October 17, 2025

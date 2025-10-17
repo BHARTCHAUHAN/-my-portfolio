@@ -1863,3 +1863,221 @@ body {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ================================
+   BOOTSTRAP 5 ENHANCEMENTS
+   ================================ */
+
+/* Bootstrap utility overrides */
+:root {
+  --bs-primary: #a78bfa;
+  --bs-primary-rgb: 167, 139, 250;
+  --bs-secondary: #ffb86c;
+  --bs-secondary-rgb: 255, 184, 108;
+  --bs-dark: #1a1625;
+  --bs-dark-rgb: 26, 22, 37;
+  --bs-body-bg: #1a1625;
+  --bs-body-color: #e0e7ef;
+  --bs-border-radius: 12px;
+  --bs-border-radius-lg: 16px;
+  --bs-border-radius-sm: 8px;
+}
+
+/* Bootstrap buttons enhancement */
+.btn-primary {
+  background: linear-gradient(135deg, #a78bfa 0%, #c084fc 100%);
+  border: none;
+  box-shadow: 0 4px 15px rgba(167, 139, 250, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #c084fc 0%, #a78bfa 100%);
+  box-shadow: 0 6px 20px rgba(167, 139, 250, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #ffb86c 0%, #ffa500 100%);
+  border: none;
+  box-shadow: 0 4px 15px rgba(255, 184, 108, 0.3);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #ffa500 0%, #ffb86c 100%);
+  box-shadow: 0 6px 20px rgba(255, 184, 108, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Bootstrap cards enhancement */
+.card {
+  background: linear-gradient(135deg, #2d1e4a 0%, #232136 100%);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: #a78bfa;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(167, 139, 250, 0.3);
+}
+
+.card-title {
+  color: #e0e7ef;
+  font-weight: 600;
+}
+
+.card-text {
+  color: #cbd5e1;
+}
+
+/* Bootstrap badges */
+.badge {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* Bootstrap tooltips and popovers */
+.tooltip-inner {
+  background: linear-gradient(135deg, #a78bfa 0%, #c084fc 100%);
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+/* Bootstrap modals */
+.modal-content {
+  background: linear-gradient(135deg, #2d1e4a 0%, #232136 100%);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  color: #e0e7ef;
+}
+
+.modal-header {
+  border-bottom: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+.modal-footer {
+  border-top: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+/* Bootstrap forms */
+.form-control,
+.form-select {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  color: #e0e7ef;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 0.25rem rgba(167, 139, 250, 0.15);
+  color: #e0e7ef;
+}
+
+.form-control::placeholder {
+  color: rgba(224, 231, 239, 0.5);
+}
+
+/* Bootstrap navbar enhancement */
+.navbar {
+  background: linear-gradient(135deg, #2d1e4a 0%, #1a1625 100%);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+.navbar-brand {
+  color: #a78bfa !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: #e0e7ef !important;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #a78bfa !important;
+}
+
+/* Bootstrap progress bars */
+.progress {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: linear-gradient(90deg, #a78bfa 0%, #ffb86c 100%);
+  transition: width 1s ease;
+}
+
+/* Bootstrap alerts */
+.alert {
+  border-radius: 12px;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+.alert-success {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: rgba(34, 197, 94, 0.3);
+  color: #4ade80;
+}
+
+.alert-danger {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #f87171;
+}
+
+.alert-info {
+  background: rgba(167, 139, 250, 0.1);
+  border-color: rgba(167, 139, 250, 0.3);
+  color: #c084fc;
+}
+
+/* Bootstrap list groups */
+.list-group-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  color: #e0e7ef;
+  transition: all 0.3s ease;
+}
+
+.list-group-item:hover {
+  background: rgba(167, 139, 250, 0.1);
+  border-color: #a78bfa;
+}
+
+/* Bootstrap accordion */
+.accordion-button {
+  background: rgba(255, 255, 255, 0.05);
+  color: #e0e7ef;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+.accordion-button:not(.collapsed) {
+  background: linear-gradient(135deg, #a78bfa 0%, #c084fc 100%);
+  color: #fff;
+}
+
+.accordion-body {
+  background: rgba(255, 255, 255, 0.03);
+  color: #cbd5e1;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card {
+    margin-bottom: 1rem;
+  }
+}
