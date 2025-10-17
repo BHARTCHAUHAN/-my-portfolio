@@ -46,5 +46,69 @@
     "tags": ["Python", "SQL", "ETL", "Automation"],
     "githubLink": "https://github.com/BHARTCHAUHAN/data-pipeline-automation",
     "stack": ["Python", "SQL"]
+  },
+  {
+    "icon": "bx bx-stats",
+    "title": "HR Analytics Dashboard",
+    "description": "Developed Power BI dashboard analyzing employee performance, turnover rates, and recruitment metrics. Enabled data-driven HR decisions reducing turnover by 22%.",
+    "tags": ["Power BI", "HR Analytics", "DAX", "Data Modeling"],
+    "githubLink": "https://github.com/BHARTCHAUHAN/hr-analytics-powerbi",
+    "stack": ["Power BI"]
+  },
+  {
+    "icon": "bx bx-health",
+    "title": "Healthcare Data Analysis",
+    "description": "Analyzed 200K+ patient records using Python and SQL to identify treatment patterns. Created predictive models for patient readmission with 82% accuracy.",
+    "tags": ["Python", "SQL", "Healthcare", "Machine Learning"],
+    "githubLink": "https://github.com/BHARTCHAUHAN/healthcare-data-analysis",
+    "stack": ["Python", "SQL"]
+  },
+  {
+    "icon": "bx bx-store",
+    "title": "Retail Inventory Optimization",
+    "description": "Built inventory forecasting model using Python and Excel. Optimized stock levels reducing waste by 30% and improving product availability by 25%.",
+    "tags": ["Python", "Excel", "Forecasting", "Optimization"],
+    "githubLink": "https://github.com/BHARTCHAUHAN/retail-inventory-optimization",
+    "stack": ["Python", "Excel"]
+  },
+  {
+    "icon": "bx bx-laptop",
+    "title": "Web Scraping & Data Mining",
+    "description": "Automated data collection from 50+ websites using Python (BeautifulSoup, Selenium). Processed and analyzed 500K+ data points for market research.",
+    "tags": ["Python", "Web Scraping", "BeautifulSoup", "Selenium"],
+    "githubLink": "https://github.com/BHARTCHAUHAN/web-scraping-data-mining",
+    "stack": ["Python"]
+  },
+  {
+    "icon": "bx bx-money",
+    "title": "Stock Market Analysis Tool",
+    "description": "Created Python application analyzing stock market trends using historical data. Implemented technical indicators and visualization dashboards for investment insights.",
+    "tags": ["Python", "Finance", "Data Visualization", "API"],
+    "githubLink": "https://github.com/BHARTCHAUHAN/stock-market-analysis",
+    "stack": ["Python"]
+  },
+  {
+    "icon": "bx bx-network-chart",
+    "title": "Social Media Analytics",
+    "description": "Built comprehensive social media analytics platform using Python and Power BI. Tracked engagement metrics, sentiment analysis, and campaign performance across platforms.",
+    "tags": ["Python", "Power BI", "NLP", "Sentiment Analysis"],
+    "githubLink": "https://github.com/BHARTCHAUHAN/social-media-analytics",
+    "stack": ["Python", "Power BI"]
+  },
+  {
+    "icon": "bx bx-calendar",
+    "title": "Time Series Forecasting",
+    "description": "Developed ARIMA and Prophet models for sales forecasting with 91% accuracy. Implemented automated weekly forecasts saving 15+ hours of manual analysis.",
+    "tags": ["Python", "Time Series", "Prophet", "Forecasting"],
+    "githubLink": "https://github.com/BHARTCHAUHAN/time-series-forecasting",
+    "stack": ["Python"]
+  },
+  {
+    "icon": "bx bx-analyse",
+    "title": "Marketing Campaign Analysis",
+    "description": "Analyzed multi-channel marketing campaigns using SQL and Power BI. Identified top-performing channels increasing ROI by 35% through data-driven optimization.",
+    "tags": ["SQL", "Power BI", "Marketing", "ROI Analysis"],
+    "githubLink": "https://github.com/BHARTCHAUHAN/marketing-campaign-analysis",
+    "stack": ["SQL", "Power BI"]
   }
 ]
