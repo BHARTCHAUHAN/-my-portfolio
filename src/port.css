@@ -2635,3 +2635,322 @@ html {
     text-align: center;
   }
 }
+
+/* ================================
+   COMPREHENSIVE MOBILE RESPONSIVE
+   ================================ */
+
+/* Extra Small Devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  /* Hero Section Mobile */
+  .hero-n8n {
+    padding: 4rem 1rem 3rem;
+  }
+
+  .hero-n8n-content {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  .hero-n8n-text {
+    text-align: center;
+  }
+
+  .hero-n8n-title {
+    font-size: 2rem;
+  }
+
+  .hero-n8n-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-n8n-description {
+    font-size: 0.95rem;
+  }
+
+  .hero-n8n-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-n8n-buttons .n8n-btn {
+    width: 100%;
+  }
+
+  .hero-n8n-social {
+    justify-content: center;
+  }
+
+  .hero-n8n-image {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  /* About Section Mobile */
+  .about-n8n {
+    padding: 3rem 1rem;
+  }
+
+  .about-n8n-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-n8n-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .about-n8n-description {
+    text-align: center;
+    font-size: 0.95rem;
+  }
+
+  .about-n8n-image {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  /* Skills Section Mobile */
+  .skills-n8n {
+    padding: 3rem 1rem;
+  }
+
+  .skills-n8n-title {
+    font-size: 2rem;
+  }
+
+  .skills-n8n-columns {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .skills-n8n-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .n8n-skillbar-label {
+    font-size: 0.9rem;
+  }
+
+  /* Projects Section Mobile */
+  .projects-n8n {
+    padding: 3rem 1rem;
+  }
+
+  .projects-n8n-title {
+    font-size: 2rem;
+  }
+
+  .projects-n8n-filters {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .projects-n8n-filter {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .projects-n8n-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-card-n8n {
+    padding: 1.25rem;
+  }
+
+  .project-card-n8n-title {
+    font-size: 1.1rem;
+  }
+
+  .project-card-n8n-desc {
+    font-size: 0.9rem;
+  }
+
+  /* Contact Section Mobile */
+  .contact-n8n {
+    padding: 3rem 1rem;
+  }
+
+  .contact-n8n-title {
+    font-size: 2rem;
+  }
+
+  .contact-n8n-main {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .contact-n8n-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .contact-n8n-desc {
+    font-size: 0.9rem;
+  }
+
+  /* Navbar Mobile */
+  .brand-text {
+    font-size: 1.2rem;
+  }
+
+  .brand-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3rem;
+  }
+}
+
+/* Small Devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .hero-n8n-content,
+  .about-n8n-content {
+    flex-direction: column;
+  }
+
+  .projects-n8n-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-n8n-main {
+    flex-direction: column;
+  }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-n8n-title {
+    font-size: 2.5rem;
+  }
+
+  .projects-n8n-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .about-n8n-content {
+    gap: 2rem;
+  }
+
+  .skills-n8n-columns {
+    gap: 2rem;
+  }
+}
+
+/* Landscape Mode Optimization */
+@media (max-height: 600px) and (orientation: landscape) {
+  .hero-n8n {
+    padding: 2rem 1rem;
+  }
+
+  .hero-n8n-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero-n8n-image {
+    max-width: 200px;
+  }
+
+  .modern-navbar.scrolled {
+    padding: 0.3rem 0;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .n8n-btn,
+  .project-card-n8n,
+  .nav-link {
+    -webkit-tap-highlight-color: rgba(167, 139, 250, 0.2);
+  }
+
+  /* Increase touch target sizes */
+  .nav-link {
+    padding: 1rem 1.2rem !important;
+    min-height: 44px;
+  }
+
+  .hero-n8n-social a,
+  .social-icon {
+    min-width: 48px;
+    min-height: 48px;
+  }
+
+  .projects-n8n-filter {
+    min-height: 44px;
+    padding: 0.7rem 1.2rem;
+  }
+
+  /* Disable hover effects on touch devices */
+  .project-card-n8n:hover {
+    transform: none;
+  }
+
+  .n8n-btn:hover::before {
+    display: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .modern-navbar,
+  .hero-n8n-buttons,
+  .hero-n8n-social,
+  .contact-n8n-form,
+  .modern-footer {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  .about-n8n,
+  .skills-n8n,
+  .projects-n8n {
+    page-break-inside: avoid;
+  }
+}
+
+/* High DPI / Retina Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .hero-n8n-image img,
+  .about-n8n-image img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Dark Mode Support (if system prefers dark) */
+@media (prefers-color-scheme: dark) {
+  /* Already dark by default, but can add overrides if needed */
+  body {
+    background: #1a1625;
+  }
+}
+
+/* Reduced Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero-n8n-image img,
+  .about-n8n-image img {
+    animation: none !important;
+  }
+
+  .gradient-text {
+    animation: none !important;
+  }
+}
