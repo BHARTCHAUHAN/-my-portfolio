@@ -1,114 +1,56 @@
 [
   {
-    "icon": "bx bxs-bar-chart-alt-2",
-    "title": "Sales Data Analysis Dashboard",
-    "description": "Built an interactive Power BI dashboard analyzing 50K+ sales records. Identified key trends resulting in 15% revenue increase through data-driven insights and predictive modeling.",
-    "tags": ["Python", "Power BI", "Data Analysis", "Pandas"],
-    "githubLink": "https://github.com/BHARTCHAUHAN/sales-data-analysis",
-    "stack": ["Python", "Power BI"]
+    "id": 1,
+    "number": "01",
+    "title": "UBER PRICING OPTIMIZATION IN NEW YORK CITY",
+    "description": "An end-to-end analysis about finding out the best pricing model for uber booking in New York City to increase the revenue by doing Linear Regression to find out the impact of each variables of uber booking, evaluate the existing pricing model (High Fare and Discounted Fare application), do impact analysis and give recommendation of the best uber booking pricing. This analysis resulting a better model of Uber Pricing that is proven to increase 11.5% revenue.",
+    "tools": ["Python (Google Collab)", "Tableau"],
+    "analysis": ["EDA", "Linear Regression"],
+    "links": {
+      "fullDeck": "https://docs.google.com/presentation/",
+      "tableau": "https://public.tableau.com/",
+      "colab": "https://colab.research.google.com/"
+    },
+    "stack": ["Python", "Data Analysis"]
   },
   {
-    "icon": "bx bx-data",
-    "title": "SQL Reporting Automation",
-    "description": "Automated daily SQL reports reducing manual work by 80%. Implemented stored procedures and triggers for real-time business intelligence across 15+ departments.",
-    "tags": ["SQL", "Automation", "BI", "SSRS"],
-    "githubLink": "https://github.com/BHARTCHAUHAN/sql-reporting-automation",
-    "stack": ["SQL"]
+    "id": 2,
+    "number": "02",
+    "title": "IBM EMPLOYEE ATTRITION PREDICTION AND STRATEGY 2023",
+    "description": "A project focusing on how to decrease employee attrition rate of IBM company by doing Logistic Regression to predict the existing employee attrition, planning strategy to make a better and fair condition of the employee, and find out how much the strategy can affect the decreasing of employee attrition rate. This analysis resulting strategy to decrease employee attrition that is predicted to decrease 3.41% employee attrition.",
+    "tools": ["Python (Google Collab)", "Tableau"],
+    "analysis": ["EDA", "Logistic Regression"],
+    "links": {
+      "fullDeck": "https://docs.google.com/presentation/",
+      "sheets": "https://docs.google.com/spreadsheets/",
+      "colab": "https://colab.research.google.com/"
+    },
+    "stack": ["Python", "Data Analysis"]
   },
   {
-    "icon": "bx bxl-python",
-    "title": "Customer Churn Prediction",
-    "description": "Developed ML model using Python (scikit-learn) to predict customer churn with 87% accuracy. Analyzed 100K+ customer records and identified key retention factors.",
-    "tags": ["Python", "Machine Learning", "Pandas", "Sklearn"],
-    "githubLink": "https://github.com/BHARTCHAUHAN/customer-churn-prediction",
-    "stack": ["Python"]
+    "id": 3,
+    "number": "03",
+    "title": "FAST FOOD MARKETING CAMPAIGN A/B TESTING",
+    "description": "A project with the main goal of determining the most profitable campaign in a fast food chain by doing A/B Testing. The marketing team runs 3 type of campaigns and the stores area categorized by 3 type of market sizes. ANOVA test is chosen for the statistical and hypothesis test, and Post-Hoc T-test is applied after. This Analysis resulting of the chosen campaign that is significantly profitable than the others.",
+    "tools": ["Google Sheet", "Excel"],
+    "analysis": ["EDA", "Statistic", "A/B Testing (ANOVA & Post Hoc T-test)"],
+    "links": {
+      "fullDeck": "https://docs.google.com/presentation/",
+      "colab": "https://colab.research.google.com/"
+    },
+    "stack": ["Excel", "Data Analysis"]
   },
   {
-    "icon": "bx bx-line-chart",
-    "title": "Financial Analysis Dashboard",
-    "description": "Created comprehensive Excel dashboard with VBA macros for financial KPI tracking. Streamlined monthly reporting process saving 10+ hours per month.",
-    "tags": ["Excel", "VBA", "Financial Analysis", "Automation"],
-    "githubLink": "https://github.com/BHARTCHAUHAN/financial-analysis-excel",
-    "stack": ["Excel"]
-  },
-  {
-    "icon": "bx bx-trending-up",
-    "title": "E-commerce Analytics Platform",
-    "description": "Built end-to-end analytics solution using Python and Tableau. Processed 1M+ transactions, created interactive dashboards for inventory and sales optimization.",
-    "tags": ["Python", "Tableau", "ETL", "Data Warehousing"],
-    "githubLink": "https://github.com/BHARTCHAUHAN/ecommerce-analytics",
-    "stack": ["Python"]
-  },
-  {
-    "icon": "bx bx-server",
-    "title": "Data Pipeline Automation",
-    "description": "Designed automated ETL pipeline using Python and SQL Server. Reduced data processing time by 60% handling 500GB+ daily data with error handling and logging.",
-    "tags": ["Python", "SQL", "ETL", "Automation"],
-    "githubLink": "https://github.com/BHARTCHAUHAN/data-pipeline-automation",
-    "stack": ["Python", "SQL"]
-  },
-  {
-    "icon": "bx bx-stats",
-    "title": "HR Analytics Dashboard",
-    "description": "Developed Power BI dashboard analyzing employee performance, turnover rates, and recruitment metrics. Enabled data-driven HR decisions reducing turnover by 22%.",
-    "tags": ["Power BI", "HR Analytics", "DAX", "Data Modeling"],
-    "githubLink": "https://github.com/BHARTCHAUHAN/hr-analytics-powerbi",
-    "stack": ["Power BI"]
-  },
-  {
-    "icon": "bx bx-health",
-    "title": "Healthcare Data Analysis",
-    "description": "Analyzed 200K+ patient records using Python and SQL to identify treatment patterns. Created predictive models for patient readmission with 82% accuracy.",
-    "tags": ["Python", "SQL", "Healthcare", "Machine Learning"],
-    "githubLink": "https://github.com/BHARTCHAUHAN/healthcare-data-analysis",
-    "stack": ["Python", "SQL"]
-  },
-  {
-    "icon": "bx bx-store",
-    "title": "Retail Inventory Optimization",
-    "description": "Built inventory forecasting model using Python and Excel. Optimized stock levels reducing waste by 30% and improving product availability by 25%.",
-    "tags": ["Python", "Excel", "Forecasting", "Optimization"],
-    "githubLink": "https://github.com/BHARTCHAUHAN/retail-inventory-optimization",
-    "stack": ["Python", "Excel"]
-  },
-  {
-    "icon": "bx bx-laptop",
-    "title": "Web Scraping & Data Mining",
-    "description": "Automated data collection from 50+ websites using Python (BeautifulSoup, Selenium). Processed and analyzed 500K+ data points for market research.",
-    "tags": ["Python", "Web Scraping", "BeautifulSoup", "Selenium"],
-    "githubLink": "https://github.com/BHARTCHAUHAN/web-scraping-data-mining",
-    "stack": ["Python"]
-  },
-  {
-    "icon": "bx bx-money",
-    "title": "Stock Market Analysis Tool",
-    "description": "Created Python application analyzing stock market trends using historical data. Implemented technical indicators and visualization dashboards for investment insights.",
-    "tags": ["Python", "Finance", "Data Visualization", "API"],
-    "githubLink": "https://github.com/BHARTCHAUHAN/stock-market-analysis",
-    "stack": ["Python"]
-  },
-  {
-    "icon": "bx bx-network-chart",
-    "title": "Social Media Analytics",
-    "description": "Built comprehensive social media analytics platform using Python and Power BI. Tracked engagement metrics, sentiment analysis, and campaign performance across platforms.",
-    "tags": ["Python", "Power BI", "NLP", "Sentiment Analysis"],
-    "githubLink": "https://github.com/BHARTCHAUHAN/social-media-analytics",
-    "stack": ["Python", "Power BI"]
-  },
-  {
-    "icon": "bx bx-calendar",
-    "title": "Time Series Forecasting",
-    "description": "Developed ARIMA and Prophet models for sales forecasting with 91% accuracy. Implemented automated weekly forecasts saving 15+ hours of manual analysis.",
-    "tags": ["Python", "Time Series", "Prophet", "Forecasting"],
-    "githubLink": "https://github.com/BHARTCHAUHAN/time-series-forecasting",
-    "stack": ["Python"]
-  },
-  {
-    "icon": "bx bx-analyse",
-    "title": "Marketing Campaign Analysis",
-    "description": "Analyzed multi-channel marketing campaigns using SQL and Power BI. Identified top-performing channels increasing ROI by 35% through data-driven optimization.",
-    "tags": ["SQL", "Power BI", "Marketing", "ROI Analysis"],
-    "githubLink": "https://github.com/BHARTCHAUHAN/marketing-campaign-analysis",
-    "stack": ["SQL", "Power BI"]
+    "id": 4,
+    "number": "04",
+    "title": "E-COMMERCE COHORT ANALYSIS AND RFM SEGMENTATION",
+    "description": "A project to boost the retention rate of an E-Commerce company by doing clustering with RFM Segmentation to strategize the treatments for each segments in order to retain them as our customers and do the Cohort Analysis to find out the maximum range of CLTV, CAC, and CRC to be used by Marketing Team. This analysis resulting treatment strategies to increase the retention rate for each RFM Segments and expected to increase retention rate 5.8% - 23.4%.",
+    "tools": ["SQL (BigQuery)", "Python (Google Collab)", "Google Sheets", "Google Looker Studio"],
+    "analysis": ["EDA", "RFM Segmentation", "Cohort Analysis"],
+    "links": {
+      "lookerCohort": "https://looker.com/",
+      "lookerSales": "https://looker.com/"
+    },
+    "stack": ["SQL", "Python", "Data Analysis"]
   }
 ]

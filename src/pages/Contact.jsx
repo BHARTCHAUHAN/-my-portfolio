@@ -49,44 +49,89 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact-n8n" id="contact">
-      <div className="contact-n8n-content">
-        <h2 className="contact-n8n-title gradient-text" data-aos="fade-up">Get in Touch</h2>
-        <div className="contact-n8n-main">
-          <div className="contact-n8n-info" data-aos="fade-right" data-aos-delay="100">
-            <h3 className="contact-n8n-subtitle">Connect with Me</h3>
-            <p className="contact-n8n-desc">I enjoy data-driven problems. Discuss projects or exchange ideas.</p>
-            <div className="contact-n8n-details">
-              <div className="detail-item">
+    <section className="contact-canva" id="contact">
+      <div className="contact-canva-container">
+        <h2 className="contact-canva-title" data-aos="fade-up">Contact Info</h2>
+        <p className="contact-canva-subtitle" data-aos="fade-up" data-aos-delay="100">Let's connect and work together!</p>
+
+        <div className="contact-canva-main">
+          {/* Contact Info */}
+          <div className="contact-canva-info" data-aos="fade-right" data-aos-delay="150">
+            <div className="contact-canva-item">
+              <div className="contact-canva-icon">
+                <i className="bx bxl-linkedin"></i>
+              </div>
+              <div className="contact-canva-details">
+                <h4>LinkedIn</h4>
+                <a href="https://www.linkedin.com/in/bhart-chauhan-8a65bb277/" target="_blank" rel="noopener noreferrer">
+                  linkedin.com/in/bhart-chauhan
+                </a>
+              </div>
+            </div>
+
+            <div className="contact-canva-item">
+              <div className="contact-canva-icon">
+                <i className="bx bxl-whatsapp"></i>
+              </div>
+              <div className="contact-canva-details">
+                <h4>Phone (WhatsApp)</h4>
+                <a href="https://wa.me/918189091763">+91 81890 91763</a>
+              </div>
+            </div>
+
+            <div className="contact-canva-item">
+              <div className="contact-canva-icon">
                 <i className="bx bx-envelope"></i>
+              </div>
+              <div className="contact-canva-details">
+                <h4>E-mail</h4>
                 <a href="mailto:chauhanbhart2792@gmail.com">chauhanbhart2792@gmail.com</a>
-              </div>
-              <div className="detail-item">
-                <i className="bx bx-phone"></i>
-                <a href="tel:+918189091763">+91 81890 91763</a>
-              </div>
-              <div className="detail-item">
-                <i className="bx bx-map"></i>
-                <span>New Delhi, India</span>
               </div>
             </div>
           </div>
-          <form className="contact-n8n-form" onSubmit={handleSubmit} data-aos="fade-left" data-aos-delay="100">
-            <div className="form-group-n8n">
-              <input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleChange} className={errors.name ? 'error' : ''} />
+
+          {/* Contact Form */}
+          <form className="contact-canva-form" onSubmit={handleSubmit} data-aos="fade-left" data-aos-delay="150">
+            <div className="form-group-canva">
+              <input 
+                type="text" 
+                name="name" 
+                placeholder="Your Name" 
+                value={formData.name} 
+                onChange={handleChange} 
+                className={errors.name ? 'error' : ''} 
+              />
               {errors.name && <span className="error-msg">{errors.name}</span>}
             </div>
-            <div className="form-group-n8n">
-              <input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleChange} className={errors.email ? 'error' : ''} />
+
+            <div className="form-group-canva">
+              <input 
+                type="email" 
+                name="email" 
+                placeholder="Your Email" 
+                value={formData.email} 
+                onChange={handleChange} 
+                className={errors.email ? 'error' : ''} 
+              />
               {errors.email && <span className="error-msg">{errors.email}</span>}
             </div>
-            <div className="form-group-n8n">
-              <textarea name="message" placeholder="Your Message" rows="5" value={formData.message} onChange={handleChange} className={errors.message ? 'error' : ''}></textarea>
+
+            <div className="form-group-canva">
+              <textarea 
+                name="message" 
+                placeholder="Your Message" 
+                rows="5" 
+                value={formData.message} 
+                onChange={handleChange} 
+                className={errors.message ? 'error' : ''}
+              ></textarea>
               {errors.message && <span className="error-msg">{errors.message}</span>}
             </div>
-            {submitStatus === 'success' && <div className="success-msg">Message sent successfully!</div>}
-            {submitStatus === 'error' && <div className="error-msg">Failed to send. Try again.</div>}
-            <button type="submit" className="n8n-btn n8n-btn-primary" disabled={isSubmitting}>
+
+            {submitStatus === 'success' && <div className="success-msg">✅ Message sent successfully!</div>}
+            {submitStatus === 'error' && <div className="error-msg">❌ Failed to send. Try again.</div>}
+
+            <button type="submit" className="contact-canva-btn" disabled={isSubmitting}>
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>

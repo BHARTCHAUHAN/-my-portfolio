@@ -1,75 +1,50 @@
 import React from 'react';
 
-const aboutFeatures = [
+const skillCategories = [
     {
-        icon: 'bx bx-bar-chart',
-        title: 'Data Analysis',
-        description: 'Transform raw data into actionable insights with advanced analytics and visualization techniques.',
+        title: 'Programming Languages',
+        skills: ['SQL', 'Python', 'Microsoft Excel', 'Google Sheet'],
     },
     {
-        icon: 'bx bx-code-block',
-        title: 'Python & SQL',
-        description: 'Write efficient, scalable code for data pipelines, automation, and complex business logic.',
+        title: 'Data Analytic Tools',
+        skills: ['Google BigQuery', 'Visual Code Studio'],
     },
     {
-        icon: 'bx bx-git-branch',
-        title: 'ETL Workflows',
-        description: 'Design robust data extraction, transformation, and loading processes for enterprise systems.',
+        title: 'Data Visualization Tools',
+        skills: ['Tableau', 'Looker Studio'],
     },
     {
-        icon: 'bx bx-line-chart',
-        title: 'Power BI Dashboards',
-        description: 'Create interactive, real-time dashboards that drive data-driven decision making.',
-    },
-    {
-        icon: 'bx bx-brain',
-        title: 'Predictive Models',
-        description: 'Build machine learning models for forecasting, churn prediction, and anomaly detection.',
-    },
-    {
-        icon: 'bx bx-zap',
-        title: 'Performance Optimization',
-        description: 'Optimize queries, reduce processing time, and scale analytics infrastructure.',
+        title: 'Data Analytic Methods',
+        skills: ['EDA', 'Segmentation/Clustering', 'Cohort', 'Linear Regression', 'Logistic Regression', 'Statistic', 'A/B Testing', 'ANOVA', 'T-Test'],
     },
 ];
 
 const About = () => {
     return (
-        <section className="about-n8n" id="about">
-            <div className="about-n8n-container">
-                <div className="about-n8n-header" data-aos="fade-up">
-                    <h2 className="about-n8n-title">What I Do</h2>
-                    <p className="about-n8n-subtitle">
-                        I specialize in building end-to-end data solutions that empower organizations to make faster, smarter decisions.
-                    </p>
+        <section className="about-canva" id="about">
+            <div className="about-canva-container">
+                <h2 className="about-canva-title" data-aos="fade-up">Hello, I&apos;m Gardi!</h2>
+                
+                <div className="about-canva-intro" data-aos="fade-up" data-aos-delay="100">
+                    <p>Data Reporting / Analyst and Certified Banking Generalist with a proven track record in various analytical roles, showcasing expertise in end-to-end business processes within the Banking / Financial Industry.</p>
                 </div>
 
-                <div className="about-n8n-grid">
-                    {aboutFeatures.map((feature, index) => (
-                        <article
-                            className="about-feature-card"
-                            key={feature.title}
+                <div className="about-canva-skills-grid">
+                    {skillCategories.map((category, index) => (
+                        <div 
+                            key={category.title}
+                            className="skill-category"
                             data-aos="fade-up"
-                            data-aos-delay={String(100 + index * 80)}
+                            data-aos-delay={String(100 + index * 100)}
                         >
-                            <div className="about-feature-icon">
-                                <i className={`bx ${feature.icon}`} aria-hidden="true" />
-                            </div>
-                            <div className="about-feature-content">
-                                <h3>{feature.title}</h3>
-                                <p>{feature.description}</p>
-                            </div>
-                        </article>
+                            <h3 className="skill-category-title">{category.title}</h3>
+                            <ul className="skill-list">
+                                {category.skills.map((skill) => (
+                                    <li key={skill} className="skill-item">{skill}</li>
+                                ))}
+                            </ul>
+                        </div>
                     ))}
-                </div>
-
-                <div className="about-n8n-cta" data-aos="fade-up" data-aos-delay="600">
-                    <p className="about-n8n-closing">
-                        Every dataset tells a story. My job is to help you discover it, and turn insights into impact.
-                    </p>
-                    <a href="#projects" className="n8n-btn n8n-btn-primary">
-                        See My Work
-                    </a>
                 </div>
             </div>
         </section>

@@ -1,35 +1,59 @@
-import React, { useMemo, useState } from "react";
-import ProjectCard from "../components/ProjectCard";
-import data from "../data/projects.json"; // path adjust if needed
-
-const FILTERS = ["All","Power BI","SQL","Python","Excel"];
+import React from "react";
+import data from "../data/projects.json";
 
 export default function Projects() {
-  const [active, setActive] = useState("All");
-
-  const list = useMemo(()=>{
-    if (active==="All") return data;
-    return data.filter(p => (p.stack||[]).includes(active));
-  }, [active]);
-
   return (
-    <section className="projects-n8n">
-      <div className="projects-n8n-content">
-        <h2 className="projects-n8n-title gradient-text" data-aos="fade-up">My Projects</h2>
-        <div className="projects-n8n-filters" data-aos="fade-up" data-aos-delay="100">
-          {FILTERS.map(f=>(
-            <button
-              key={f}
-              onClick={()=>setActive(f)}
-              aria-pressed={active===f}
-              className={`projects-n8n-filter ${active===f ? 'active' : ''}`}
+    <section className="projects-canva" id="projects">
+      <div className="projects-canva-container">
+        <h2 className="projects-canva-title" data-aos="fade-up">Notable Projects</h2>
+        
+        <div className="projects-canva-grid">
+          {data.map((project, index) => (
+            <article 
+              key={project.id} 
+              className="project-canva-card"
+              data-aos="fade-up"
+              data-aos-delay={String(100 + index * 100)}
             >
-              {f}
-            </button>
+              <div className="project-canva-number">{project.number}</div>
+              
+              <h3 className="project-canva-title">{project.title}</h3>
+              
+              <p className="project-canva-description">{project.description}</p>
+              
+              <div className="project-canva-meta">
+                {project.tools && (
+                  <div className="project-canva-tools">
+                    <strong>Tools:</strong> {project.tools.join(", ")}
+                  </div>
+                )}
+                {project.analysis && (
+                  <div className="project-canva-analysis">
+                    <strong>Analysis:</strong> {project.analysis.join(", ")}
+                  </div>
+                )}
+              </div>
+
+              <div className="project-canva-links">
+                {project.links && Object.entries(project.links).map(([key, url]) => (
+                  <a 
+                    key={key}
+                    href={url} 
+                    className="project-canva-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {key === 'fullDeck' && 'Full Deck'}
+                    {key === 'tableau' && 'Tableau Dashboard'}
+                    {key === 'colab' && 'Google Collab'}
+                    {key === 'sheets' && 'Google Sheet (Analysis & Dashboard)'}
+                    {key === 'lookerCohort' && 'Google Looker (Cohort Dashboard)'}
+                    {key === 'lookerSales' && 'Google Looker (Sales Dashboard)'}
+                  </a>
+                ))}
+              </div>
+            </article>
           ))}
-        </div>
-        <div className="projects-n8n-grid">
-          {list.map((p, index) => <ProjectCard key={p.title} {...p} data-aos="zoom-in" data-aos-delay={index * 50} />)}
         </div>
       </div>
     </section>
