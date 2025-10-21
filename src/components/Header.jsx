@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { personalInfo, navLinks } from '../data/config';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -9,7 +10,7 @@ export default function Header() {
       setScrolled(window.scrollY > 50);
       
       // Update active section based on scroll position
-      const sections = ['home', 'about', 'skills', 'projects', 'contact'];
+      const sections = navLinks.map(link => link.href.slice(1));
       const current = sections.find(section => {
         const element = document.getElementById(section);
         if (element) {
@@ -25,14 +26,6 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { href: "#home", label: "Home", icon: "bx bx-home-alt" },
-    { href: "#about", label: "About", icon: "bx bx-user" },
-    { href: "#skills", label: "Skills", icon: "bx bx-code-alt" },
-    { href: "#projects", label: "Projects", icon: "bx bx-briefcase" },
-    { href: "#contact", label: "Contact", icon: "bx bx-envelope" },
-  ];
-
   return (
     <nav className={`navbar navbar-expand-lg fixed-top modern-navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container">
@@ -41,8 +34,8 @@ export default function Header() {
           <span className="brand-icon">
             <i className="bx bxs-data"></i>
           </span>
-          <span className="brand-text">Bhart Chauhan</span>
-          <span className="brand-subtitle">Data Analyst</span>
+          <span className="brand-text">{personalInfo.name}</span>
+          <span className="brand-subtitle">{personalInfo.title}</span>
         </a>
 
         {/* Mobile Toggle Button */}
@@ -76,7 +69,7 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="navbar-cta ms-lg-3">
-            <a href="Bhart_Chauhan_Data_Analyst_Resume.pdf" className="btn btn-primary" download>
+            <a href={personalInfo.resume} className="btn btn-primary" download>
               <i className="bx bx-download"></i>
               Resume
             </a>

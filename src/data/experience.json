@@ -1,0 +1,76 @@
+{
+  "education": [
+    {
+      "type": "education",
+      "title": "Full-Stack Data Analytics",
+      "institution": "RevoU",
+      "icon": "bx bx-book",
+      "year": "2023",
+      "grade": "Grade: 100/100",
+      "description": "Attended the mini course and intensive data analytics course with 110+ hours of lectures of 6 modules of Data Analytics Program"
+    },
+    {
+      "type": "education",
+      "title": "Bank BTN's Officer Development Program (ODP)",
+      "institution": "LPPI",
+      "icon": "bx bx-book",
+      "year": "2017",
+      "description": "Intensive Management Trainee training program in Banking Industry consist of In-class Training and On the Job Training"
+    },
+    {
+      "type": "education",
+      "title": "Architecture Engineering",
+      "institution": "Universitas Brawijaya",
+      "icon": "bx bx-book",
+      "year": "2011",
+      "grade": "Bachelor Degree, Cumulative GPA: 3.17 / 4.00"
+    }
+  ],
+  "experience": [
+    {
+      "type": "experience",
+      "title": "AML Reporting Specialist",
+      "company": "Bank Jago",
+      "icon": "bx bx-briefcase",
+      "period": "Full time, 2024 - Present",
+      "description": "Conduct data analysis to support Anti Money Laundering decision-making process also created ad-hoc and periodic regulatory Anti Money Laundering reporting"
+    },
+    {
+      "type": "experience",
+      "title": "Data Analyst Mentor",
+      "company": "RevoU",
+      "icon": "bx bx-briefcase",
+      "period": "Part-time, 2024",
+      "description": "Conducted mentoring session every week for 48 students to optimize their data analytics learning, utilizing tools like SQL, Google Looker Studio, and Google Sheets"
+    },
+    {
+      "type": "experience",
+      "title": "Data Analyst Associate",
+      "company": "RevoU x Zurich",
+      "icon": "bx bx-briefcase",
+      "period": "Virtual Internship, 2023 - 2024",
+      "description": "Executed hands on of stealth digital marketing dataset as part of Data Analytics Virtual Internship with RevoU x Zurich"
+    },
+    {
+      "type": "experience",
+      "title": "Loan Monitoring and Restructuring Analyst",
+      "company": "Bank Tabungan Negara (Persero) Tbk",
+      "icon": "bx bx-briefcase",
+      "period": "Fulltime, 2022"
+    },
+    {
+      "type": "experience",
+      "title": "Commercial Asset Management Analyst",
+      "company": "Bank Tabungan Negara (Persero) Tbk",
+      "icon": "bx bx-briefcase",
+      "period": "Full time, 2018 - 2022"
+    },
+    {
+      "type": "experience",
+      "title": "Commercial Loan Analyst",
+      "company": "Bank Tabungan Negara (Persero) Tbk",
+      "icon": "bx bx-briefcase",
+      "period": "Full time, 2017-2018"
+    }
+  ]
+}

@@ -35,25 +35,28 @@
 my-portfolio/
 ├── public/                 # Static files
 │   ├── index.html         # HTML template with SEO meta tags
-│   └── Bhart_Chauhan_Data_Analyst_Resume.pdf
+│   └── Bhart_Chauhan_Resume.pdf
 ├── src/
 │   ├── assets/            # Images and media
 │   ├── components/        # Reusable React components
 │   │   ├── Header.jsx
 │   │   ├── Hero.jsx
 │   │   ├── Footer.jsx
-│   │   ├── ProjectCard.jsx
-│   │   └── ThemeToggle.jsx
+│   │   ├── ErrorBoundary.jsx  # Error handling
+│   │   └── Loading.jsx        # Loading states
 │   ├── pages/             # Page components
 │   │   ├── Home.jsx
 │   │   ├── About.jsx
 │   │   ├── Skills.jsx
 │   │   ├── Projects.jsx
+│   │   ├── Experience.jsx
 │   │   └── Contact.jsx
-│   ├── data/              # JSON data
-│   │   └── projects.json
+│   ├── data/              # Centralized data
+│   │   ├── config.js      # Personal info, skills, links
+│   │   ├── projects.json  # Project data
+│   │   └── experience.json # Work & education history
 │   ├── port.css           # Main styling
-│   ├── App.js             # Root component
+│   ├── App.js             # Root with lazy loading
 │   └── index.js           # Entry point
 └── package.json           # Dependencies
 ```
@@ -93,26 +96,28 @@ Creates optimized production build in the `build` folder.
 
 ## 🎨 Customization
 
-### Update Projects
+### Update Personal Info (Centralized)
 
-Edit `src/data/projects.json` to add/modify projects:
+Edit `src/data/config.js` to update all personal information:
 
-```json
-{
-  "icon": "bx bxl-python",
-  "title": "Your Project",
-  "description": "Project description",
-  "tags": ["Python", "SQL"],
-  "githubLink": "https://github.com/username/repo",
-  "stack": ["Python", "SQL"]
-}
+```javascript
+export const personalInfo = {
+  name: "Your Name",
+  title: "Your Title",
+  email: "your@email.com",
+  // ... other fields
+};
 ```
 
-### Update Personal Info
+### Update Projects
 
-- **Hero Section:** `src/components/Hero.jsx`
-- **About Section:** `src/pages/About.jsx`
-- **Skills:** `src/pages/Skills.jsx`
+Edit `src/data/projects.json` to add/modify projects.
+
+### Update Experience
+
+Edit `src/data/experience.json` to update work history and education.
+
+All data is now centralized for easy management!
 - **Contact Info:** `src/pages/Contact.jsx`
 
 ## 📧 Contact Form Setup

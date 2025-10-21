@@ -1,4 +1,5 @@
 ﻿import React, { useState } from 'react';
+import { personalInfo } from '../data/config';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -75,7 +76,7 @@ const Contact = () => {
               </div>
               <div className="contact-canva-details">
                 <h4>Phone (WhatsApp)</h4>
-                <a href="https://wa.me/918189091763">+91 81890 91763</a>
+                <a href={`https://wa.me/${personalInfo.whatsapp}`}>{personalInfo.phone}</a>
               </div>
             </div>
 
@@ -85,7 +86,7 @@ const Contact = () => {
               </div>
               <div className="contact-canva-details">
                 <h4>E-mail</h4>
-                <a href="mailto:chauhanbhart2792@gmail.com">chauhanbhart2792@gmail.com</a>
+                <a href={`mailto:${personalInfo.email}`}>{personalInfo.email}</a>
               </div>
             </div>
           </div>

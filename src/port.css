@@ -46,29 +46,28 @@
 }
 
 .hero-canva-image-wrapper {
-  width: 220px;
-  height: 220px;
+  width: clamp(180px, 22vw, 220px);
+  height: clamp(180px, 22vw, 220px);
   border-radius: 50%;
   overflow: hidden;
-  border: 3px solid #a78bfa;
-  box-shadow: 0 0 40px rgba(167, 139, 250, 0.3);
+  border: none;
+  box-shadow: none;
   transition: all 0.3s ease;
-  animation: float 3s ease-in-out infinite;
 }
 
 .hero-canva-image-wrapper:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 60px rgba(167, 139, 250, 0.5);
 }
 
 .hero-canva-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .hero-canva-tagline {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
   font-weight: 700;
   color: #cbd5f5;
   margin: 0;
@@ -76,7 +75,7 @@
 }
 
 .hero-canva-tagline-highlight {
-  font-size: 1.8rem;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
   font-weight: 700;
   background: linear-gradient(135deg, #a78bfa 0%, #ffb86c 100%);
   -webkit-background-clip: text;
@@ -98,7 +97,7 @@
 }
 
 .hero-canva-name h1 {
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 6vw, 4rem);
   font-weight: 900;
   margin: 0;
   letter-spacing: -0.02em;
@@ -308,18 +307,13 @@
 }
 
 .skill-category {
-  background: rgba(167, 139, 250, 0.08);
-  border: 1px solid rgba(167, 139, 250, 0.2);
   padding: 2rem 1.5rem;
-  border-radius: 12px;
   transition: all 0.3s ease;
 }
 
 .skill-category:hover {
   border-color: #a78bfa;
-  background: rgba(167, 139, 250, 0.12);
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(167, 139, 250, 0.2);
 }
 
 .skill-category-title {
@@ -445,7 +439,7 @@
 }
 
 .projects-canva-container {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -459,123 +453,214 @@
   color: #f5f7ff;
 }
 
-.projects-canva-grid {
+/* Image-Based Project Grid Layout */
+.projects-grid {
   display: grid;
-  gap: 3rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.project-canva-card {
-  background: rgba(167, 139, 250, 0.08);
-  border: 1px solid rgba(167, 139, 250, 0.2);
-  padding: 3rem;
-  border-radius: 16px;
-  transition: all 0.3s ease;
+.project-card {
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  animation: slideUp 0.6s ease-out;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Project Card Image */
+.project-card-image {
   position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.1) 0%, rgba(167, 139, 250, 0.05) 100%);
 }
 
-.project-canva-card:hover {
-  border-color: #a78bfa;
-  background: rgba(167, 139, 250, 0.12);
-  transform: translateY(-5px);
-  box-shadow: 0 15px 50px rgba(167, 139, 250, 0.2);
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
 }
 
-.project-canva-number {
+.project-card:hover .project-card-image img {
+  transform: scale(1.08);
+}
+
+.project-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-card-overlay {
+  opacity: 1;
+}
+
+.project-card-number {
   font-size: 3.5rem;
   font-weight: 900;
-  color: rgba(167, 139, 250, 0.15);
-  position: absolute;
-  top: -10px;
-  right: 20px;
-  line-height: 1;
+  color: #a78bfa;
+  opacity: 0.8;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-.project-canva-title {
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: #f5f7ff;
-  margin: 0 0 1.5rem;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-  line-height: 1.3;
-}
-
-.project-canva-description {
-  font-size: 1rem;
-  line-height: 1.7;
-  color: #cbd5f5;
-  margin: 0 0 2rem;
-}
-
-.project-canva-meta {
+/* Project Card Content */
+.project-card-content {
+  padding: 1.8rem 0;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(167, 139, 250, 0.2);
+  flex-grow: 1;
 }
 
-.project-canva-tools,
-.project-canva-analysis {
+.project-card-title {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #f5f7ff;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.4;
+}
+
+.project-card-description {
   font-size: 0.95rem;
+  line-height: 1.65;
   color: #cbd5f5;
+  margin: 0;
+  flex-grow: 1;
 }
 
-.project-canva-tools strong,
-.project-canva-analysis strong {
+.project-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 0;
+  border-top: 1px solid rgba(167, 139, 250, 0.1);
+  border-bottom: 1px solid rgba(167, 139, 250, 0.1);
+}
+
+.project-meta-item {
+  font-size: 0.85rem;
+  color: #cbd5f5;
+  line-height: 1.5;
+}
+
+.project-meta-item strong {
   color: #a78bfa;
   font-weight: 700;
 }
 
-.project-canva-links {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+.project-meta-item span {
+  color: #e0e7ef;
 }
 
-.project-canva-link {
+/* Project Card Links */
+.project-card-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+}
+
+.project-card-link {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.2) 0%, rgba(167, 139, 250, 0.1) 100%);
-  border: 1px solid #a78bfa;
-  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid rgba(167, 139, 250, 0.5);
+  border-radius: 6px;
   color: #a78bfa;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
-.project-canva-link:hover {
-  background: linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%);
+.project-card-link:hover {
+  background: rgba(167, 139, 250, 0.15);
+  border-color: #a78bfa;
   color: #fff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(167, 139, 250, 0.3);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive Canva Projects */
+@media (max-width: 991.98px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .projects-canva-title {
+    font-size: 2.2rem;
+  }
+
+  .project-card-image {
+    height: 280px;
+  }
+
+  .project-card-number {
+    font-size: 2.8rem;
+  }
+}
+
 @media (max-width: 767.98px) {
   .projects-canva {
     padding: 3rem 1rem;
   }
 
   .projects-canva-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 2.5rem;
   }
 
-  .project-canva-card {
-    padding: 2rem;
+  .projects-grid {
+    gap: 1.5rem;
   }
 
-  .project-canva-number {
-    font-size: 2.5rem;
-    right: 10px;
+  .project-card-image {
+    height: 220px;
   }
 
-  .project-canva-title {
-    font-size: 1.2rem;
+  .project-card-content {
+    padding: 1.2rem 0;
+  }
+
+  .project-card-title {
+    font-size: 1.1rem;
+  }
+
+  .project-card-description {
+    font-size: 0.9rem;
   }
 }
 
@@ -585,51 +670,46 @@
   }
 
   .projects-canva-title {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
   }
 
-  .projects-canva-grid {
-    gap: 2rem;
+  .projects-grid {
+    gap: 1.2rem;
   }
 
-  .project-canva-card {
-    padding: 1.5rem;
+  .project-card-image {
+    height: 180px;
   }
 
-  .project-canva-number {
+  .project-card-number {
     font-size: 2rem;
-    right: 5px;
-    top: 0px;
   }
 
-  .project-canva-title {
+  .project-card-content {
+    padding: 1rem 0;
+  }
+
+  .project-card-title {
     font-size: 1rem;
   }
 
-  .project-canva-description {
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .project-canva-meta {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    gap: 0.75rem;
-  }
-
-  .project-canva-tools,
-  .project-canva-analysis {
+  .project-card-description {
     font-size: 0.85rem;
+    line-height: 1.5;
   }
 
-  .project-canva-links {
+  .project-meta-item {
+    font-size: 0.75rem;
+  }
+
+  .project-card-links {
     gap: 0.5rem;
   }
 
-  .project-canva-link {
-    padding: 0.6rem 1rem;
-    font-size: 0.8rem;
+  .project-card-link {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
   }
 }
 
@@ -954,165 +1034,80 @@
   font-size: 2.8rem;
   font-weight: 900;
   color: #f5f7ff;
-  margin: 0 0 1rem;
+  margin: 0;
   letter-spacing: -0.02em;
 }
 
-.skills-n8n-subtitle {
-  font-size: 1.1rem;
-  color: #cbd5f5;
-  margin: 0;
-  max-width: 620px;
-  line-height: 1.7;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.skills-n8n-grid {
+/* Skills Display Grid - Canva Style */
+.skills-display-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 
-.skill-category-card {
-  background: linear-gradient(135deg, rgba(25, 22, 39, 0.7) 0%, rgba(38, 32, 58, 0.8) 100%);
-  border: 1px solid rgba(167, 139, 250, 0.2);
-  border-radius: 24px;
-  padding: 2rem;
-  box-shadow: 0 20px 50px rgba(11, 11, 21, 0.4);
-  backdrop-filter: blur(20px);
-  transition: all 0.35s ease;
-  position: relative;
-  overflow: hidden;
+.skill-display-card {
+  background: transparent;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(167, 139, 250, 0.15);
+  transition: all 0.3s ease;
 }
 
-.skill-category-card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at top right, rgba(167, 139, 250, 0.15), transparent 65%);
-  opacity: 0;
-  transition: opacity 0.35s ease;
+.skill-display-card:last-child {
+  border-bottom: none;
 }
 
-.skill-category-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(167, 139, 250, 0.35);
-  box-shadow: 0 32px 70px rgba(82, 62, 173, 0.3);
-  background: linear-gradient(135deg, rgba(30, 26, 45, 0.82) 0%, rgba(45, 38, 68, 0.9) 100%);
-}
-
-.skill-category-card:hover::before {
-  opacity: 1;
-}
-
-.skill-category-header {
+.skill-display-header {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1.8rem;
-  padding-bottom: 1rem;
-  border-bottom: 1px solid rgba(167, 139, 250, 0.15);
+  margin-bottom: 1.5rem;
 }
 
-.skill-category-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.35), rgba(124, 58, 237, 0.45));
+.skill-display-header i {
+  font-size: 2rem;
+  color: #a78bfa;
+  width: 50px;
+  height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffb86c;
-  font-size: 1.4rem;
-  flex-shrink: 0;
 }
 
-.skill-category-card:hover .skill-category-icon {
-  transform: scale(1.12) rotate(-5deg);
-  transition: transform 0.35s ease;
-}
-
-.skill-category-header h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
+.skill-display-header h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
   color: #f5f7ff;
   margin: 0;
-  flex: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
-.skill-category-items {
+.skill-display-list {
   display: flex;
   flex-direction: column;
-  gap: 1.4rem;
+  gap: 0.8rem;
 }
 
-.skill-bar-wrapper {
-  animation: slideInUp 0.6s ease-out forwards;
-  opacity: 0;
-}
-
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 12px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.skill-bar-header {
+.skill-display-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.6rem;
-}
-
-.skill-bar-label {
+  gap: 0.8rem;
   font-size: 0.95rem;
-  font-weight: 600;
-  color: #d6dcf5;
-}
-
-.skill-bar-percentage {
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: #ffb86c;
-  background: rgba(255, 184, 108, 0.15);
-  padding: 0.3rem 0.8rem;
-  border-radius: 6px;
-}
-
-.skill-bar-bg {
-  width: 100%;
-  height: 8px;
-  background: rgba(167, 139, 250, 0.15);
-  border-radius: 999px;
-  overflow: hidden;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.skill-bar-fill {
-  height: 100%;
-  background: linear-gradient(90deg, #a78bfa 0%, #ffb86c 100%);
-  border-radius: 999px;
-  transition: width 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-  box-shadow: 0 0 12px rgba(255, 184, 108, 0.5);
-}
-
-.skills-n8n-footer {
-  text-align: center;
-  padding: 2rem 2rem;
-  border-radius: 20px;
-  background: linear-gradient(135deg, rgba(19, 18, 31, 0.6) 0%, rgba(32, 27, 50, 0.7) 100%);
-  border: 1px solid rgba(167, 139, 250, 0.15);
   color: #cbd5f5;
-  font-size: 1rem;
-  line-height: 1.7;
-  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 0.4rem 0 0.4rem 0.5rem;
+}
+
+.skill-display-item:hover {
+  color: #e0e7ef;
+  padding-left: 1rem;
+}
+
+.skill-display-item i {
+  color: #a78bfa;
+  font-size: 1.1rem;
+  flex-shrink: 0;
 }
 
 @media (max-width: 991.98px) {
@@ -1124,9 +1119,15 @@
     font-size: 2.2rem;
   }
 
-  .skills-n8n-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  .skills-display-grid {
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .skills-display-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1139,29 +1140,21 @@
     font-size: 1.8rem;
   }
 
-  .skills-n8n-subtitle {
-    font-size: 0.95rem;
-  }
-
-  .skills-n8n-grid {
+  .skills-display-grid {
     grid-template-columns: 1fr;
     gap: 1.2rem;
   }
 
-  .skill-category-card {
-    padding: 1.5rem;
+  .skill-display-card {
+    padding: 1.5rem 0;
   }
 
-  .skill-category-header h3 {
+  .skill-display-header h3 {
     font-size: 1.05rem;
   }
 
-  .skill-bar-label {
+  .skill-display-item {
     font-size: 0.9rem;
-  }
-
-  .skill-bar-bg {
-    height: 6px;
   }
 }
 
@@ -1364,6 +1357,37 @@
   position: relative;
   display: flex;
   gap: 1.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(167, 139, 250, 0.1);
+}
+
+.experience-canva-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.experience-canva-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  background: rgba(167, 139, 250, 0.1);
+  border: 2px solid rgba(167, 139, 250, 0.3);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.experience-canva-item:hover .experience-canva-icon {
+  background: rgba(167, 139, 250, 0.2);
+  border-color: #a78bfa;
+}
+
+.experience-canva-icon i {
+  font-size: 1.5rem;
+  color: #a78bfa;
 }
 
 .experience-canva-dot {
@@ -5297,14 +5321,10 @@ html {
   gap: 1.5rem;
   align-items: flex-start;
   padding: 1.5rem;
-  background: rgba(167, 139, 250, 0.05);
-  border: 1px solid rgba(167, 139, 250, 0.1);
-  border-radius: 12px;
   transition: all 0.3s ease;
 }
 
 .contact-canva-item:hover {
-  background: rgba(167, 139, 250, 0.08);
   border-color: #a78bfa;
   transform: translateY(-3px);
 }
@@ -5315,8 +5335,6 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(167, 139, 250, 0.15);
-  border-radius: 10px;
   color: #a78bfa;
   font-size: 1.5rem;
   flex-shrink: 0;
@@ -5345,16 +5363,7 @@ html {
   flex-direction: column;
   gap: 1.25rem;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(167, 139, 250, 0.1);
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
   transition: all 0.3s ease;
-}
-
-.contact-canva-form:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(167, 139, 250, 0.2);
 }
 
 .form-group-canva {
@@ -5365,8 +5374,6 @@ html {
 
 .form-group-canva input,
 .form-group-canva textarea {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(167, 139, 250, 0.15);
   color: #f5f7ff;
   padding: 0.9rem 1.1rem;
   border-radius: 8px;
@@ -5551,5 +5558,37 @@ html {
 
   .gradient-text {
     animation: none !important;
+  }
+}/* Skills Categories Grid */
+.skills-n8n-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Responsive Skills */
+@media (max-width: 991.98px) {
+  .skill-category {
+    padding: 1.5rem 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .skills-n8n-categories {
+    gap: 1.5rem;
+  }
+  
+  .skill-category {
+    padding: 1.2rem 0;
+  }
+  
+  .skill-category-header i {
+    font-size: 1.5rem;
+  }
+  
+  .skill-category-header h3 {
+    font-size: 1.1rem;
   }
 }
