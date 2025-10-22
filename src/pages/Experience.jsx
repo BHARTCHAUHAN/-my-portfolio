@@ -7,7 +7,7 @@ const Experience = () => {
   return (
     <section className="experience-canva" id="experience">
       <div className="experience-canva-container">
-        <h2 className="experience-canva-title" data-aos="fade-up">Education & Experience Background</h2>
+        <h2 className="experience-canva-title" data-aos="fade-up">Education & Experience</h2>
         
         <div className="experience-canva-grid">
           {/* Education */}
@@ -21,9 +21,6 @@ const Experience = () => {
                   data-aos="fade-up"
                   data-aos-delay={String(150 + index * 120)}
                 >
-                  <div className="experience-canva-icon">
-                    {item.icon && <i className={`bx ${item.icon}`}></i>}
-                  </div>
                   <div className="experience-canva-content">
                     <h4 className="experience-canva-item-title">{item.title}</h4>
                     <p className="experience-canva-institution">{item.institution}</p>
@@ -47,9 +44,6 @@ const Experience = () => {
                   data-aos="fade-up"
                   data-aos-delay={String(150 + index * 120)}
                 >
-                  <div className="experience-canva-icon">
-                    {item.icon && <i className={`bx ${item.icon}`}></i>}
-                  </div>
                   <div className="experience-canva-content">
                     <h4 className="experience-canva-item-title">{item.title}</h4>
                     <p className="experience-canva-company">{item.company}</p>

@@ -52,6 +52,7 @@ export const navLinks = [
   { href: "#about", label: "About", icon: "bx bx-user" },
   { href: "#skills", label: "Skills", icon: "bx bx-code-alt" },
   { href: "#projects", label: "Projects", icon: "bx bx-briefcase" },
+  { href: "#experience", label: "Experience", icon: "bx bx-time-five" },
   { href: "#contact", label: "Contact", icon: "bx bx-envelope" }
 ];
 

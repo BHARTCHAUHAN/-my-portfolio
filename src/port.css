@@ -1,6 +1,6 @@
-/* ====== CANVA-STYLE HERO SECTION ====== */
+/* ====== SIMPLE HERO SECTION ====== */
 .hero-canva {
-  background: linear-gradient(135deg, #0f0f1c 0%, #1a1625 50%, #0f0f1c 100%);
+  background: #0f0f1c;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -11,13 +11,7 @@
 }
 
 .hero-canva::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 20% 50%, rgba(167, 139, 250, 0.15) 0%, transparent 50%),
-              radial-gradient(circle at 80% 50%, rgba(167, 139, 250, 0.1) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
 .hero-canva-container {
@@ -77,10 +71,7 @@
 .hero-canva-tagline-highlight {
   font-size: clamp(1.2rem, 3vw, 1.8rem);
   font-weight: 700;
-  background: linear-gradient(135deg, #a78bfa 0%, #ffb86c 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #a78bfa;
   margin: 0;
 }
 
@@ -256,20 +247,14 @@
 
 /* ====== CANVA-STYLE ABOUT SECTION ====== */
 .about-canva {
-  background: linear-gradient(135deg, #1a1625 0%, #0f0f1c 50%, #1a1625 100%);
+  background: #0f0f1c;
   padding: 5rem 1rem 4rem;
   position: relative;
   overflow: hidden;
 }
 
 .about-canva::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 30% 70%, rgba(167, 139, 250, 0.1) 0%, transparent 50%),
-              radial-gradient(circle at 70% 30%, rgba(167, 139, 250, 0.05) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
 .about-canva-container {
@@ -307,13 +292,14 @@
 }
 
 .skill-category {
-  padding: 2rem 1.5rem;
+  padding: 0;
   transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(167, 139, 250, 0.2);
 }
 
 .skill-category:hover {
-  border-color: #a78bfa;
-  transform: translateY(-5px);
+  border-color: transparent;
+  transform: none;
 }
 
 .skill-category-title {
@@ -346,7 +332,7 @@
   content: '•';
   position: absolute;
   left: 0;
-  color: #ffb86c;
+  color: #a78bfa;
   font-weight: bold;
 }
 
@@ -422,24 +408,18 @@
 
 /* ====== CANVA-STYLE PROJECTS SECTION ====== */
 .projects-canva {
-  background: linear-gradient(135deg, #0f0f1c 0%, #1a1625 50%, #0f0f1c 100%);
+  background: #0f0f1c;
   padding: 5rem 1rem 4rem;
   position: relative;
   overflow: hidden;
 }
 
 .projects-canva::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 100%, rgba(167, 139, 250, 0.1) 0%, transparent 60%),
-              radial-gradient(circle at 0% 50%, rgba(167, 139, 250, 0.05) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
 .projects-canva-container {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
   position: relative;
   z-index: 1;
@@ -449,168 +429,108 @@
   font-size: 2.8rem;
   font-weight: 900;
   text-align: center;
-  margin: 0 0 4rem;
+  margin: 0 0 3rem;
   color: #f5f7ff;
 }
 
-/* Image-Based Project Grid Layout */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.project-card {
-  background: transparent;
-  border-radius: 12px;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+/* Simple Project List Layout */
+.projects-simple-list {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  animation: slideUp 0.6s ease-out;
+  gap: 2.5rem;
 }
 
-.project-card:hover {
-  transform: translateY(-8px);
+.project-simple-item {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(167, 139, 250, 0.2);
+  transition: all 0.3s ease;
 }
 
-/* Project Card Image */
-.project-card-image {
-  position: relative;
-  width: 100%;
-  height: 250px;
-  overflow: hidden;
-  border-radius: 12px;
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.1) 0%, rgba(167, 139, 250, 0.05) 100%);
+.project-simple-item:last-child {
+  border-bottom: none;
 }
 
-.project-card-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-  display: block;
+.project-simple-item:hover {
+  padding-left: 1rem;
 }
 
-.project-card:hover .project-card-image img {
-  transform: scale(1.08);
-}
-
-.project-card-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
+.project-simple-header {
   display: flex;
-  align-items: flex-end;
-  padding: 1.5rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-.project-card:hover .project-card-overlay {
-  opacity: 1;
-}
-
-.project-card-number {
-  font-size: 3.5rem;
+.project-simple-number {
+  font-size: 1.2rem;
   font-weight: 900;
   color: #a78bfa;
-  opacity: 0.8;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0.7;
+  min-width: 40px;
 }
 
-/* Project Card Content */
-.project-card-content {
-  padding: 1.8rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  flex-grow: 1;
-}
-
-.project-card-title {
+.project-simple-title {
   font-size: 1.3rem;
   font-weight: 800;
   color: #f5f7ff;
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 0.03em;
-  line-height: 1.4;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
 }
 
-.project-card-description {
-  font-size: 0.95rem;
-  line-height: 1.65;
+.project-simple-description {
+  font-size: 1rem;
+  line-height: 1.7;
   color: #cbd5f5;
-  margin: 0;
-  flex-grow: 1;
+  margin: 0 0 1.5rem;
 }
 
-.project-card-meta {
+.project-simple-meta {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  margin-bottom: 1.5rem;
   padding: 1rem 0;
   border-top: 1px solid rgba(167, 139, 250, 0.1);
   border-bottom: 1px solid rgba(167, 139, 250, 0.1);
 }
 
-.project-meta-item {
-  font-size: 0.85rem;
+.project-simple-tools,
+.project-simple-analysis {
+  font-size: 0.9rem;
   color: #cbd5f5;
-  line-height: 1.5;
 }
 
-.project-meta-item strong {
+.project-simple-tools strong,
+.project-simple-analysis strong {
   color: #a78bfa;
   font-weight: 700;
 }
 
-.project-meta-item span {
-  color: #e0e7ef;
-}
-
-/* Project Card Links */
-.project-card-links {
+.project-simple-links {
   display: flex;
-  gap: 0.75rem;
+  gap: 1rem;
   flex-wrap: wrap;
-  padding-top: 1rem;
 }
 
-.project-card-link {
+.project-simple-link {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.6rem 1.2rem;
   background: transparent;
   border: 1px solid rgba(167, 139, 250, 0.5);
   border-radius: 6px;
   color: #a78bfa;
   text-decoration: none;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-weight: 600;
   transition: all 0.3s ease;
-  white-space: nowrap;
 }
 
-.project-card-link:hover {
-  background: rgba(167, 139, 250, 0.15);
+.project-simple-link:hover {
+  background: rgba(167, 139, 250, 0.1);
   border-color: #a78bfa;
   color: #fff;
-  transform: translateY(-2px);
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* Responsive Canva Projects */
@@ -1001,27 +921,20 @@
 
 /* n8n-style Skills Section */
 .skills-n8n {
-  background: linear-gradient(180deg, #1a1625 0%, #0f0f1c 50%, #1a1625 100%);
-  padding: 5rem 1rem 4.5rem;
+  background: #0f0f1c;
+  padding: 5rem 1rem 4rem;
   position: relative;
   overflow: hidden;
 }
 
 .skills-n8n::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(120% 120% at 0% 0%, rgba(255, 184, 108, 0.08) 0%, rgba(15, 15, 25, 0) 60%),
-              radial-gradient(90% 140% at 100% 100%, rgba(124, 58, 237, 0.1) 0%, rgba(15, 15, 25, 0) 55%);
-  opacity: 0.7;
-  z-index: 0;
-  animation: hero-overlay-shift 36s ease-in-out infinite;
+  display: none;
 }
 
 .skills-n8n-container {
   position: relative;
   z-index: 1;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -1038,124 +951,51 @@
   letter-spacing: -0.02em;
 }
 
-/* Skills Display Grid - Canva Style */
-.skills-display-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+/* Simple Skills List */
+.skills-simple-list {
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
-  margin-bottom: 1rem;
 }
 
-.skill-display-card {
-  background: transparent;
+.skills-simple-group {
   padding: 2rem 0;
-  border-bottom: 1px solid rgba(167, 139, 250, 0.15);
-  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(167, 139, 250, 0.2);
 }
 
-.skill-display-card:last-child {
+.skills-simple-group:last-child {
   border-bottom: none;
 }
 
-.skill-display-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.skill-display-header i {
-  font-size: 2rem;
-  color: #a78bfa;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.skill-display-header h3 {
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: #f5f7ff;
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-}
-
-.skill-display-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-}
-
-.skill-display-item {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-  font-size: 0.95rem;
-  color: #cbd5f5;
-  transition: all 0.3s ease;
-  padding: 0.4rem 0 0.4rem 0.5rem;
-}
-
-.skill-display-item:hover {
-  color: #e0e7ef;
-  padding-left: 1rem;
-}
-
-.skill-display-item i {
-  color: #a78bfa;
+.skills-simple-header {
   font-size: 1.1rem;
-  flex-shrink: 0;
+  font-weight: 700;
+  color: #a78bfa;
+  margin: 0 0 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-@media (max-width: 991.98px) {
-  .skills-n8n {
-    padding: 4rem 1rem 3.5rem;
-  }
-
-  .skills-n8n-title {
-    font-size: 2.2rem;
-  }
-
-  .skills-display-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
+.skills-simple-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-@media (max-width: 767.98px) {
-  .skills-display-grid {
-    grid-template-columns: 1fr;
-  }
+.skills-simple-item {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  border-radius: 6px;
+  color: #cbd5f5;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
 }
 
-@media (max-width: 575.98px) {
-  .skills-n8n {
-    padding: 2.5rem 0.75rem 2rem;
-  }
-
-  .skills-n8n-title {
-    font-size: 1.8rem;
-  }
-
-  .skills-display-grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-
-  .skill-display-card {
-    padding: 1.5rem 0;
-  }
-
-  .skill-display-header h3 {
-    font-size: 1.05rem;
-  }
-
-  .skill-display-item {
-    font-size: 0.9rem;
-  }
+.skills-simple-item:hover {
+  border-color: #a78bfa;
+  color: #f5f7ff;
 }
 
 /* n8n-style Projects Section */
@@ -1282,20 +1122,14 @@
 
 /* ====== CANVA-STYLE EXPERIENCE SECTION ====== */
 .experience-canva {
-  background: linear-gradient(135deg, #1a1625 0%, #0f0f1c 50%, #1a1625 100%);
+  background: #0f0f1c;
   padding: 5rem 1rem 4rem;
   position: relative;
   overflow: hidden;
 }
 
 .experience-canva::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 30% 20%, rgba(167, 139, 250, 0.08) 0%, transparent 40%),
-              radial-gradient(circle at 70% 80%, rgba(167, 139, 250, 0.05) 0%, transparent 40%);
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
 .experience-canva-container {
@@ -1309,7 +1143,7 @@
   font-size: 2.8rem;
   font-weight: 900;
   text-align: center;
-  margin: 0 0 4rem;
+  margin: 0 0 3rem;
   color: #f5f7ff;
 }
 
@@ -1326,39 +1160,32 @@
 }
 
 .experience-canva-section-title {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 800;
   color: #a78bfa;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  text-align: center;
 }
 
 .experience-canva-timeline {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2rem;
   position: relative;
-  padding-left: 2rem;
 }
 
 .experience-canva-timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg, #a78bfa 0%, rgba(167, 139, 250, 0.3) 100%);
+  display: none;
 }
 
 .experience-canva-item {
   position: relative;
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+  gap: 0.5rem;
   padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(167, 139, 250, 0.1);
+  border-bottom: 1px solid rgba(167, 139, 250, 0.2);
 }
 
 .experience-canva-item:last-child {
@@ -1367,38 +1194,7 @@
 }
 
 .experience-canva-icon {
-  width: 50px;
-  height: 50px;
-  min-width: 50px;
-  background: rgba(167, 139, 250, 0.1);
-  border: 2px solid rgba(167, 139, 250, 0.3);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  flex-shrink: 0;
-}
-
-.experience-canva-item:hover .experience-canva-icon {
-  background: rgba(167, 139, 250, 0.2);
-  border-color: #a78bfa;
-}
-
-.experience-canva-icon i {
-  font-size: 1.5rem;
-  color: #a78bfa;
-}
-
-.experience-canva-dot {
-  width: 12px;
-  height: 12px;
-  background: #a78bfa;
-  border-radius: 50%;
-  position: absolute;
-  left: -7px;
-  top: 6px;
-  box-shadow: 0 0 12px rgba(167, 139, 250, 0.4);
+  display: none;
 }
 
 .experience-canva-content {
@@ -1432,6 +1228,13 @@
   font-size: 0.9rem;
   color: #cbd5f5;
   margin: 0.3rem 0 0.5rem;
+}
+
+.experience-canva-description {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #cbd5f5;
+  margin: 0;
 }
 
 .experience-canva-description {
@@ -2917,10 +2720,11 @@ body {
 }
 
 main, section {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    overflow-x: hidden;
+    /* max-width: 1100px; */
+    /* margin: 0 auto; */
+    /* padding: 2rem 1rem; */
+    /* overflow-x: hidden; */
+    padding-top: 21px !important;
 }
 
 * {
@@ -5264,20 +5068,14 @@ html {
 
 /* Canva-style Contact Section */
 .contact-canva {
-  background: linear-gradient(180deg, #0f0f1c 0%, #1a1625 45%, #0f0f1c 100%);
+  background: #0f0f1c;
   padding: 5rem 1rem 4.5rem;
   position: relative;
   overflow: hidden;
 }
 
 .contact-canva::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(120% 120% at 100% 50%, rgba(167, 139, 250, 0.08) 0%, rgba(15, 15, 25, 0) 60%),
-              radial-gradient(90% 140% at 0% 100%, rgba(255, 184, 108, 0.06) 0%, rgba(15, 15, 25, 0) 55%);
-  opacity: 0.5;
-  z-index: 0;
+  display: none;
 }
 
 .contact-canva-container {
@@ -5318,26 +5116,18 @@ html {
 
 .contact-canva-item {
   display: flex;
-  gap: 1.5rem;
-  align-items: flex-start;
-  padding: 1.5rem;
-  transition: all 0.3s ease;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(167, 139, 250, 0.2);
 }
 
-.contact-canva-item:hover {
-  border-color: #a78bfa;
-  transform: translateY(-3px);
+.contact-canva-item:last-child {
+  border-bottom: none;
 }
 
 .contact-canva-icon {
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #a78bfa;
-  font-size: 1.5rem;
-  flex-shrink: 0;
+  display: none;
 }
 
 .contact-canva-details h4 {
@@ -5362,8 +5152,7 @@ html {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  padding: 2rem;
-  transition: all 0.3s ease;
+  padding: 2rem 0;
 }
 
 .form-group-canva {
@@ -5375,6 +5164,8 @@ html {
 .form-group-canva input,
 .form-group-canva textarea {
   color: #f5f7ff;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(167, 139, 250, 0.3);
   padding: 0.9rem 1.1rem;
   border-radius: 8px;
   font-family: inherit;
@@ -5392,7 +5183,6 @@ html {
   outline: none;
   background: rgba(255, 255, 255, 0.06);
   border-color: #a78bfa;
-  box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.1);
 }
 
 .form-group-canva input.error,
@@ -5401,8 +5191,8 @@ html {
 }
 
 .contact-canva-btn {
-  background: linear-gradient(135deg, #a78bfa 0%, #8b6bff 100%);
-  color: white;
+  background: #a78bfa;
+  color: #0f0f1c;
   border: none;
   padding: 0.95rem 1.8rem;
   font-size: 1rem;
@@ -5414,14 +5204,12 @@ html {
 }
 
 .contact-canva-btn:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(167, 139, 250, 0.35);
+  background: #8b6bff;
 }
 
 .contact-canva-btn:disabled {
   opacity: 0.6;
   cursor: not-allowed;
-  transform: none;
 }
 
 .error-msg {
@@ -5449,10 +5237,6 @@ html {
   .contact-canva-title {
     font-size: 2.5rem;
   }
-
-  .contact-canva-form {
-    padding: 1.5rem;
-  }
 }
 
 @media (max-width: 767.98px) {
@@ -5467,15 +5251,6 @@ html {
 
   .contact-canva-subtitle {
     margin-bottom: 2rem;
-  }
-
-  .contact-canva-item {
-    padding: 1.25rem;
-  }
-
-  .contact-canva-icon {
-    width: 45px;
-    height: 45px;
   }
 }
 
@@ -5495,17 +5270,6 @@ html {
 
   .contact-canva-main {
     gap: 1.5rem;
-  }
-
-  .contact-canva-item {
-    padding: 1rem;
-    gap: 1rem;
-  }
-
-  .contact-canva-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 1.25rem;
   }
 
   .contact-canva-details h4 {

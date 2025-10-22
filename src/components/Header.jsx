@@ -11,15 +11,19 @@ export default function Header() {
       
       // Update active section based on scroll position
       const sections = navLinks.map(link => link.href.slice(1));
-      const current = sections.find(section => {
+      let currentSection = sections[0];
+
+      sections.forEach(section => {
         const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
+        if (!element) return;
+
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= 120 && rect.bottom >= 120) {
+          currentSection = section;
         }
-        return false;
       });
-      if (current) setActiveSection(current);
+
+      setActiveSection(currentSection);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -35,7 +39,6 @@ export default function Header() {
             <i className="bx bxs-data"></i>
           </span>
           <span className="brand-text">{personalInfo.name}</span>
-          <span className="brand-subtitle">{personalInfo.title}</span>
         </a>
 
         {/* Mobile Toggle Button */}
@@ -59,6 +62,7 @@ export default function Header() {
                 <a
                   className={`nav-link ${activeSection === link.href.slice(1) ? 'active' : ''}`}
                   href={link.href}
+                  onClick={() => setActiveSection(link.href.slice(1))}
                 >
                   <i className={link.icon}></i>
                   <span>{link.label}</span>

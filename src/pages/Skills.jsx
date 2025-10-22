@@ -4,22 +4,18 @@ function Skills() {
   const skillGrouping = [
     {
       mainCategory: 'Programming Languages',
-      icon: 'bx bx-code-block',
       skills: ['SQL', 'Python', 'Microsoft Excel', 'Google Sheet']
     },
     {
       mainCategory: 'Data Analytic Tools',
-      icon: 'bx bx-line-chart',
       skills: ['Google BigQuery', 'Visual Code Studio']
     },
     {
       mainCategory: 'Data Visualization Tools',
-      icon: 'bx bx-bar-chart',
       skills: ['Tableau', 'Looker Studio']
     },
     {
       mainCategory: 'Data Analytic Methods',
-      icon: 'bx bx-brain',
       skills: ['EDA', 'Segmentation/Clustering', 'Cohort', 'Linear Regression', 'Logistic Regression', 'Statistic', 'A/B Testing', 'ANOVA', 'T-Test']
     }
   ];
@@ -31,25 +27,21 @@ function Skills() {
           <h2 className="skills-n8n-title">Technical Skills</h2>
         </div>
 
-        <div className="skills-display-grid">
+        <div className="skills-simple-list">
           {skillGrouping.map((group, groupIndex) => (
             <div
               key={group.mainCategory}
-              className="skill-display-card"
+              className="skills-simple-group"
               data-aos="fade-up"
               data-aos-delay={String(100 + groupIndex * 120)}
             >
-              <div className="skill-display-header">
-                <i className={`bx ${group.icon}`} aria-hidden="true" />
-                <h3>{group.mainCategory}</h3>
-              </div>
+              <h3 className="skills-simple-header">{group.mainCategory}</h3>
 
-              <div className="skill-display-list">
-                {group.skills.map((skill, skillIndex) => (
-                  <div key={skill} className="skill-display-item">
-                    <i className="bx bx-check-circle" aria-hidden="true" />
-                    <span>{skill}</span>
-                  </div>
+              <div className="skills-simple-items">
+                {group.skills.map((skill) => (
+                  <span key={skill} className="skills-simple-item">
+                    {skill}
+                  </span>
                 ))}
               </div>
             </div>
