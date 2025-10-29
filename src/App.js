@@ -11,7 +11,6 @@ import Header from './components/Header';
 
 // Lazy load components for better performance
 const Home = lazy(() => import('./pages/Home'));
-const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
   useEffect(() => {
@@ -33,7 +32,6 @@ function App() {
         <main>
           <Home />
         </main>
-        <Footer />
       </Suspense>
     </ErrorBoundary>
   );
