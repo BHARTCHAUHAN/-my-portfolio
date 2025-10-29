@@ -5,7 +5,7 @@ export const personalInfo = {
   firstName: "BHART",
   lastName: "CHAUHAN",
   title: "Data Analyst",
-  subtitle: "Data Reporting / Analyst and Certified Banking Generalist",
+  subtitle: "Data Reporting / Analyst and Certified ",
   tagline: "I help people finding insights",
   taglineHighlight: "through data",
   email: "chauhanbhart2792@gmail.com",

@@ -5,6 +5,7 @@ import Skills from "../pages/Skills";
 import Projects from "../pages/Projects";
 import Experience from "../pages/Experience";
 import Contact from "../pages/Contact";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <section id="experience"><Experience /></section>
         <section id="contact"><Contact /></section>
       </main>
+      <Footer />
     </>
   );
 }

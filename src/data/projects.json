@@ -2,8 +2,8 @@
   {
     "id": 1,
     "number": "01",
-    "title": "UBER PRICING OPTIMIZATION IN NEW YORK CITY",
-    "description": "An end-to-end analysis about finding out the best pricing model for uber booking in New York City to increase the revenue by doing Linear Regression to find out the impact of each variables of uber booking, evaluate the existing pricing model (High Fare and Discounted Fare application), do impact analysis and give recommendation of the best uber booking pricing. This analysis resulting a better model of Uber Pricing that is proven to increase 11.5% revenue.",
+    "title": "E-Commerce-Sales-Analysis-for-Data-Driven-Decision-Making",
+    "description": "This project provides an interactive dashboard for E-Commerce Sales Analysis using RFM Customer Segmentation. The dashboard enables data-driven decision making by visualizing key metrics such as customer distribution by segment, average spend, total sales, and average recency across different customer groups.",
     "tools": ["Python (Google Collab)", "Tableau"],
     "analysis": ["EDA", "Linear Regression"],
     "image": "https://images.unsplash.com/photo-1533373512331-104ac77014e0?w=500&h=400&fit=crop",
@@ -18,8 +18,8 @@
   {
     "id": 2,
     "number": "02",
-    "title": "IBM EMPLOYEE ATTRITION PREDICTION AND STRATEGY 2023",
-    "description": "A project focusing on how to decrease employee attrition rate of IBM company by doing Logistic Regression to predict the existing employee attrition, planning strategy to make a better and fair condition of the employee, and find out how much the strategy can affect the decreasing of employee attrition rate. This analysis resulting strategy to decrease employee attrition that is predicted to decrease 3.41% employee attrition.",
+    "title": "HR-Analytics-Dashboard",
+    "description": "This repository contains an **HR Analytics Project** using both **Python (Jupyter Notebook)** and **Power BI**. The goal is to analyze employee attrition, demographics, and satisfaction to gain insights that help HR teams make data-driven decisions.",
     "tools": ["Python (Google Collab)", "Tableau"],
     "analysis": ["EDA", "Logistic Regression"],
     "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop",
