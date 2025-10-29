@@ -9,13 +9,12 @@ export const personalInfo = {
   tagline: "I help people finding insights",
   taglineHighlight: "through data",
   email: "chauhanbhart2792@gmail.com",
-  phone: "+918189091763",
-  whatsapp: "918189091763",
+  phone: "+917835978072", // Updated phone number
+  whatsapp: "917835978072", // Updated WhatsApp number
   location: "New Delhi, India",
   resume: "Bhart_Chauhan_Resume.pdf",
   bio: [
-    "Data Reporting / Analyst and Certified Banking Generalist with a proven track record in various analytical roles, showcasing expertise in end-to-end business processes within the Banking / Financial Industry.",
-    "Proficient in SQL, Python, Google Sheets, Microsoft Excel, Statistics, Tableau, and Google Looker Studio for comprehensive data analysis and visualization. Comfortable with end-to-end data analysis, data processing, dashboard / daily reporting creation, and presenting actionable insights with effective communication and engaging story-telling skills."
+  "I’m a data analyst skilled in SQL, Python, Excel, and Power BI. I enjoy turning raw data into clear, useful insights for business growth, especially in e-commerce and finance. My experience includes building dashboards, automating reports, and analyzing customer and financial data. I’m certified in advanced analytics and banking, and I love helping teams make smart decisions with data."  
   ]
 };
 
@@ -31,7 +30,7 @@ export const socialLinks = [
     label: 'GitHub' 
   },
   { 
-    href: 'https://wa.me/918189091763', 
+    href: 'https://wa.me/917835978072', 
     icon: 'bxl-whatsapp', 
     label: 'WhatsApp' 
   },

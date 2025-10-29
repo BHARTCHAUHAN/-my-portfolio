@@ -2,75 +2,38 @@
   "education": [
     {
       "type": "education",
-      "title": "Full-Stack Data Analytics",
-      "institution": "RevoU",
+      "title": " Data Analyst Program",
+      "institution": "INFOTECH SOFTNET",
       "icon": "bx bx-book",
-      "year": "2023",
-      "grade": "Grade: 100/100",
-      "description": "Attended the mini course and intensive data analytics course with 110+ hours of lectures of 6 modules of Data Analytics Program"
+      "year": "2025",
+      "grade": "Grade: A+",
+      "description": "Focus: Hands-on projects in sales analytics, dashboard building and RFM customer segmentation."
     },
     {
       "type": "education",
-      "title": "Bank BTN's Officer Development Program (ODP)",
-      "institution": "LPPI",
+      "title": "Advanced Diploma",
+      "institution": " National Institute of Electronics and Information Technology",
       "icon": "bx bx-book",
-      "year": "2017",
-      "description": "Intensive Management Trainee training program in Banking Industry consist of In-class Training and On the Job Training"
+      "year": "2025",
+      "description": "Relevant coursework: SQL, Python, Advanced Excel, Data Visualization, Power BI."
     },
     {
       "type": "education",
-      "title": "Architecture Engineering",
-      "institution": "Universitas Brawijaya",
+      "title": "BCA (Bachelor of Computer Applications)",
+      "institution": "Indira Gandhi National Open University",
       "icon": "bx bx-book",
-      "year": "2011",
-      "grade": "Bachelor Degree, Cumulative GPA: 3.17 / 4.00"
+      "year": "Pursuing (Expected: 2026)",
+      "description": "Relevant courses: Programming, Database Management, Statistics."
     }
   ],
   "experience": [
     {
       "type": "experience",
-      "title": "AML Reporting Specialist",
-      "company": "Bank Jago",
+      "title": "Data Analyst",
+      "company": "Istudio",
       "icon": "bx bx-briefcase",
-      "period": "Full time, 2024 - Present",
-      "description": "Conduct data analysis to support Anti Money Laundering decision-making process also created ad-hoc and periodic regulatory Anti Money Laundering reporting"
-    },
-    {
-      "type": "experience",
-      "title": "Data Analyst Mentor",
-      "company": "RevoU",
-      "icon": "bx bx-briefcase",
-      "period": "Part-time, 2024",
-      "description": "Conducted mentoring session every week for 48 students to optimize their data analytics learning, utilizing tools like SQL, Google Looker Studio, and Google Sheets"
-    },
-    {
-      "type": "experience",
-      "title": "Data Analyst Associate",
-      "company": "RevoU x Zurich",
-      "icon": "bx bx-briefcase",
-      "period": "Virtual Internship, 2023 - 2024",
-      "description": "Executed hands on of stealth digital marketing dataset as part of Data Analytics Virtual Internship with RevoU x Zurich"
-    },
-    {
-      "type": "experience",
-      "title": "Loan Monitoring and Restructuring Analyst",
-      "company": "Bank Tabungan Negara (Persero) Tbk",
-      "icon": "bx bx-briefcase",
-      "period": "Fulltime, 2022"
-    },
-    {
-      "type": "experience",
-      "title": "Commercial Asset Management Analyst",
-      "company": "Bank Tabungan Negara (Persero) Tbk",
-      "icon": "bx bx-briefcase",
-      "period": "Full time, 2018 - 2022"
-    },
-    {
-      "type": "experience",
-      "title": "Commercial Loan Analyst",
-      "company": "Bank Tabungan Negara (Persero) Tbk",
-      "icon": "bx bx-briefcase",
-      "period": "Full time, 2017-2018"
+      "period": "Remote",
+      "description": "Built an interactive sales analytics dashboard (Power BI, Python, Excel) to visualize key KPIs: profit, orders, net sales, and units sold.Performed RFM customer segmentation and created actionable customer cohorts (Champions, Loyal, General) to support targeted marketing.Analyzed seller and product performance; surfaced top brands and SKUs to guide inventory and promotional decisions.Implemented forecasting for future sales and automated reporting to streamline business planning and review.Cleaned, transformed, and merged sales, customer, and product datasets to support accurate visualizations and analysis."
     }
   ]
 }

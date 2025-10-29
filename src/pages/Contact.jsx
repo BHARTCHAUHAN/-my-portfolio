@@ -55,9 +55,19 @@ const Contact = () => {
         <h2 className="contact-canva-title" data-aos="fade-up">Contact Info</h2>
         <p className="contact-canva-subtitle" data-aos="fade-up" data-aos-delay="100">Let's connect and work together!</p>
 
+        {/* Phone Highlight Box */}
+        <div className="contact-phone-box" data-aos="zoom-in" data-aos-delay="150">
+          <h4>📞 Direct Call</h4>
+          <a href={`tel:${personalInfo.phone}`} className="contact-phone-link">
+            {personalInfo.phone}
+          </a>
+          <p>Click to call directly • Available for calls</p>
+        </div>
+
         <div className="contact-canva-main">
           {/* Contact Info */}
-          <div className="contact-canva-info" data-aos="fade-right" data-aos-delay="150">
+          <div className="contact-canva-info" data-aos="fade-right" data-aos-delay="200">
+            {/* LinkedIn */}
             <div className="contact-canva-item">
               <div className="contact-canva-icon">
                 <i className="bx bxl-linkedin"></i>
@@ -70,16 +80,20 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* WhatsApp */}
             <div className="contact-canva-item">
               <div className="contact-canva-icon">
                 <i className="bx bxl-whatsapp"></i>
               </div>
               <div className="contact-canva-details">
-                <h4>Phone (WhatsApp)</h4>
-                <a href={`https://wa.me/${personalInfo.whatsapp}`}>{personalInfo.phone}</a>
+                <h4>WhatsApp</h4>
+                <a href={`https://wa.me/${personalInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
+                  Message on WhatsApp
+                </a>
               </div>
             </div>
 
+            {/* Email */}
             <div className="contact-canva-item">
               <div className="contact-canva-icon">
                 <i className="bx bx-envelope"></i>
@@ -92,7 +106,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <form className="contact-canva-form" onSubmit={handleSubmit} data-aos="fade-left" data-aos-delay="150">
+          <form className="contact-canva-form" onSubmit={handleSubmit} data-aos="fade-left" data-aos-delay="200">
             <div className="form-group-canva">
               <input 
                 type="text" 

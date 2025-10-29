@@ -9,9 +9,7 @@
     "image": "https://images.unsplash.com/photo-1533373512331-104ac77014e0?w=500&h=400&fit=crop",
     "thumbnail": "https://images.unsplash.com/photo-1533373512331-104ac77014e0?w=300&h=200&fit=crop",
     "links": {
-      "fullDeck": "https://docs.google.com/presentation/",
-      "tableau": "https://public.tableau.com/",
-      "colab": "https://colab.research.google.com/"
+      "github": "https://github.com/BHARTCHAUHAN/E-Commerce-Sales-Analysis-for-Data-Driven-Decision-Making"
     },
     "stack": ["Python", "Data Analysis"]
   },
@@ -25,39 +23,35 @@
     "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=400&fit=crop",
     "thumbnail": "https://images.unsplash.com/photo-1552664730-d307ca884978?w=300&h=200&fit=crop",
     "links": {
-      "fullDeck": "https://docs.google.com/presentation/",
-      "sheets": "https://docs.google.com/spreadsheets/",
-      "colab": "https://colab.research.google.com/"
+      "github": "https://github.com/BHARTCHAUHAN/HR-Analytics-Dashboard"
     },
     "stack": ["Python", "Data Analysis"]
   },
   {
     "id": 3,
     "number": "03",
-    "title": "FAST FOOD MARKETING CAMPAIGN A/B TESTING",
-    "description": "A project with the main goal of determining the most profitable campaign in a fast food chain by doing A/B Testing. The marketing team runs 3 type of campaigns and the stores area categorized by 3 type of market sizes. ANOVA test is chosen for the statistical and hypothesis test, and Post-Hoc T-test is applied after. This Analysis resulting of the chosen campaign that is significantly profitable than the others.",
+    "title": "Netflix Movies & TV Shows Analysis",
+    "description": "This project explores and analyzes the Netflix dataset, which contains information about movies and TV shows available on the platform. The workflow is divided into two parts.",
     "tools": ["Google Sheet", "Excel"],
     "analysis": ["EDA", "Statistic", "A/B Testing (ANOVA & Post Hoc T-test)"],
     "image": "https://images.unsplash.com/photo-1557821552-17105176677c?w=500&h=400&fit=crop",
     "thumbnail": "https://images.unsplash.com/photo-1557821552-17105176677c?w=300&h=200&fit=crop",
     "links": {
-      "fullDeck": "https://docs.google.com/presentation/",
-      "colab": "https://colab.research.google.com/"
+      "github": "https://github.com/BHARTCHAUHAN/netflix-movies-tv-analysis"
     },
     "stack": ["Excel", "Data Analysis"]
   },
   {
     "id": 4,
     "number": "04",
-    "title": "E-COMMERCE COHORT ANALYSIS AND RFM SEGMENTATION",
-    "description": "A project to boost the retention rate of an E-Commerce company by doing clustering with RFM Segmentation to strategize the treatments for each segments in order to retain them as our customers and do the Cohort Analysis to find out the maximum range of CLTV, CAC, and CRC to be used by Marketing Team. This analysis resulting treatment strategies to increase the retention rate for each RFM Segments and expected to increase retention rate 5.8% - 23.4%.",
+    "title": "COVID-19 Global Data Analysis Dashboard",
+    "description": "This repository contains an exploratory data analysis (EDA) and visualization project on the WHO COVID-19 global dataset.The goal is to analyze the spread of COVID-19 across countries and regions using Python and create clear, interactive charts.",
     "tools": ["SQL (BigQuery)", "Python (Google Collab)", "Google Sheets", "Google Looker Studio"],
     "analysis": ["EDA", "RFM Segmentation", "Cohort Analysis"],
     "image": "https://images.unsplash.com/photo-1460925895917-aaf19ac89c9d?w=500&h=400&fit=crop",
     "thumbnail": "https://images.unsplash.com/photo-1460925895917-aaf19ac89c9d?w=300&h=200&fit=crop",
     "links": {
-      "lookerCohort": "https://looker.com/",
-      "lookerSales": "https://looker.com/"
+      "github": "https://github.com/BHARTCHAUHAN/covid19-global-analysis-dashboard"
     },
     "stack": ["SQL", "Python", "Data Analysis"]
   }

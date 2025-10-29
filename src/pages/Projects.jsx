@@ -36,22 +36,18 @@ export default function Projects() {
               </div>
 
               <div className="project-simple-links">
-                {project.links && Object.entries(project.links).map(([key, url]) => (
+                {project.links?.github && (
                   <a 
-                    key={key}
-                    href={url} 
+                    href={project.links.github} 
                     className="project-simple-link"
                     target="_blank"
                     rel="noopener noreferrer"
+                    title="GitHub Repository"
                   >
-                    {key === 'fullDeck' && 'Full Deck'}
-                    {key === 'tableau' && 'Tableau'}
-                    {key === 'colab' && 'Google Colab'}
-                    {key === 'sheets' && 'Google Sheet'}
-                    {key === 'lookerCohort' && 'Looker (Cohort)'}
-                    {key === 'lookerSales' && 'Looker (Sales)'}
+                    <i className="bx bxl-github"></i>
+                    GitHub
                   </a>
-                ))}
+                )}
               </div>
             </article>
           ))}

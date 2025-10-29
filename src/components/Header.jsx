@@ -125,7 +125,13 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="navbar-cta ms-lg-3">
-            <a href={personalInfo.resume} className="btn btn-primary" download onClick={closeMenu}>
+            <a 
+              href="Bhart_Chauhan_Data_Analyst_Resume.pdf" 
+              className="btn btn-primary" 
+              download="Bhart_Chauhan_Data_Analyst_Resume.pdf"
+              onClick={closeMenu}
+              title="Download Resume"
+            >
               <i className="bx bx-download"></i>
               Resume
             </a>

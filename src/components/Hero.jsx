@@ -34,8 +34,12 @@ const Hero = () => {
                     </div>
 
                     <div className="hero-canva-actions">
-                        <a href={personalInfo.resume} className="hero-canva-btn-primary" download>
-                            <i className="bx bx-download"></i> Download CV
+                        <a 
+                          href="Bhart_Chauhan_Data_Analyst_Resume.pdf" 
+                          className="hero-canva-btn-primary" 
+                          download="Bhart_Chauhan_Data_Analyst_Resume.pdf"
+                        >
+                          <i className="bx bx-download"></i> Download CV
                         </a>
                     </div>
 

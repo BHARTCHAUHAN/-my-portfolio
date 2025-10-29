@@ -6,6 +6,7 @@
   align-items: center;
   justify-content: center;
   padding: 2rem 1rem;
+  padding-top: 7rem;  /* Add gap from navbar */
   position: relative;
   overflow: hidden;
 }
@@ -205,6 +206,7 @@
   .hero-canva {
     min-height: auto;
     padding: 3rem 1rem;
+    padding-top: 6rem;  /* Mobile navbar gap */
   }
 
   .hero-canva-profile {
@@ -2274,4 +2276,56 @@ html {
     padding: 0.85rem 1.5rem;
     font-size: 0.95rem;
   }
+}
+
+.contact-phone-link {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #a78bfa !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 0.5rem 0;
+}
+
+.contact-phone-link:hover {
+  color: #ffb86c !important;
+  transform: translateX(5px);
+  letter-spacing: 0.05em;
+}
+
+.contact-phone-box {
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.1) 0%, rgba(255, 184, 108, 0.05) 100%);
+  border: 2px solid #a78bfa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.contact-phone-box:hover {
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.2) 0%, rgba(255, 184, 108, 0.1) 100%);
+  border-color: #ffb86c;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(167, 139, 250, 0.2);
+}
+
+.contact-phone-box h4 {
+  color: #f5f7ff;
+  margin: 0 0 0.8rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.contact-phone-box .contact-phone-link {
+  font-size: 1.4rem;
+  display: block;
+}
+
+.contact-phone-box p {
+  color: #cbd5f5;
+  font-size: 0.85rem;
+  margin: 0.8rem 0 0;
 }
